@@ -1,0 +1,28 @@
+16:35:04.480 INFO  assignment1.driver : program initialized
+16:40:43.058 INFO  assignment1.BookListViewController : loaded book list view
+16:40:43.061 INFO  assignment1.BookListViewController : successfully populated list
+16:40:45.866 INFO  assignment1.BookListViewController : book1 selected
+16:40:45.883 INFO  assignment1.BookDetailViewController : loaded book's detail
+16:40:53.867 INFO  assignment1.driver : program initialized
+18:09:20.265 INFO  assignment1.BookListViewController : loaded book list view
+18:09:20.268 INFO  assignment1.BookListViewController : successfully populated list
+18:10:11.102 INFO  assignment1.BookListViewController : book1 selected
+18:10:11.122 INFO  assignment1.BookDetailViewController : loaded book's detail
+18:10:31.919 INFO  assignment1.BookListViewController : loaded book list view
+18:10:31.921 INFO  assignment1.BookListViewController : successfully populated list
+18:10:32.613 INFO  assignment1.BookListViewController : book1 selected
+18:10:32.631 INFO  assignment1.BookDetailViewController : loaded book's detail
+18:10:36.481 INFO  assignment1.BookDetailViewController : clicked save button
+18:10:38.529 INFO  assignment1.driver : program initialized
+18:10:51.579 INFO  assignment1.BookListViewController : loaded book list view
+18:10:51.582 INFO  assignment1.BookListViewController : successfully populated list
+18:11:00.614 INFO  assignment1.BookListViewController : loaded book list view
+18:11:00.616 INFO  assignment1.BookListViewController : successfully populated list
+18:11:01.601 INFO  assignment1.BookListViewController : book1 selected
+18:11:01.618 INFO  assignment1.BookDetailViewController : loaded book's detail
+18:11:04.440 INFO  assignment1.driver : program initialized
+18:14:02.940 INFO  assignment1.driver : program initialized
+18:14:05.357 INFO  assignment1.BookListViewController : loaded book list view
+18:14:05.358 INFO  assignment1.BookListViewController : successfully populated list
+18:14:06.410 INFO  assignment1.BookListViewController : book3 selected
+18:14:06.429 INFO  assignment1.BookDetailViewController : loaded book's detail
