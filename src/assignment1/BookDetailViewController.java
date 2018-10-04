@@ -43,4 +43,9 @@ public class BookDetailViewController implements Initializable {
 			
 		}
 
+		public static void setBook(String selected) {
+			// set selected book
+			
+		}
+
 	}
