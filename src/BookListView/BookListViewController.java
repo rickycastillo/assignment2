@@ -1,10 +1,13 @@
 package BookListView;
+import java.awt.print.Book;
 import java.net.URL;
+import java.util.List;
 import java.util.ResourceBundle;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -19,6 +22,11 @@ public class BookListViewController implements Initializable {
 //	private String selected;
 		
 	@FXML private ListView<String> BookList;
+	
+	private ObservableList<Book> BooksDisplay;
+	
+    private List<Book> books;
+
 	
    
 //	@FXML
@@ -51,8 +59,9 @@ public class BookListViewController implements Initializable {
 	}
 	
     public void populate() {
-    	BookList.getItems().addAll("book1", "book2", "book3");
-    	logger.info("successfully populated list");
+		this.BooksDisplay = FXCollections.observableArrayList(books);
+		//this.BookList.setItems(BooksDisplay);
+		logger.info("successfully populated list");
     	
     }
     
