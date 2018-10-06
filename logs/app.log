@@ -26,3 +26,102 @@
 18:14:05.358 INFO  assignment1.BookListViewController : successfully populated list
 18:14:06.410 INFO  assignment1.BookListViewController : book3 selected
 18:14:06.429 INFO  assignment1.BookDetailViewController : loaded book's detail
+22:12:25.384 INFO  assignment2.driver : program initialized
+22:20:23.238 INFO  assignment2.driver : program initialized
+22:20:26.945 INFO  assignment2.BookListViewController : loaded book list view
+22:20:26.947 INFO  assignment2.BookListViewController : successfully populated list
+22:20:31.685 INFO  assignment2.BookListViewController : book2 selected
+22:20:31.737 INFO  assignment2.BookDetailViewController : loaded book's detail
+22:20:33.064 INFO  assignment2.BookDetailViewController : clicked save button
+22:20:35.839 INFO  assignment2.BookListViewController : loaded book list view
+22:20:35.840 INFO  assignment2.BookListViewController : successfully populated list
+22:20:36.644 INFO  assignment2.BookListViewController : book2 selected
+22:20:36.669 INFO  assignment2.BookDetailViewController : loaded book's detail
+22:20:37.981 INFO  assignment2.BookListViewController : loaded book list view
+22:20:37.981 INFO  assignment2.BookListViewController : successfully populated list
+22:20:38.843 INFO  assignment2.BookListViewController : book3 selected
+22:20:38.864 INFO  assignment2.BookDetailViewController : loaded book's detail
+22:20:41.967 INFO  assignment2.BookListViewController : loaded book list view
+22:20:41.968 INFO  assignment2.BookListViewController : successfully populated list
+22:20:43.038 INFO  assignment2.BookListViewController : book2 selected
+22:20:43.058 INFO  assignment2.BookDetailViewController : loaded book's detail
+22:20:44.466 INFO  assignment2.BookListViewController : loaded book list view
+22:20:44.468 INFO  assignment2.BookListViewController : successfully populated list
+22:20:45.069 INFO  assignment2.BookListViewController : book2 selected
+22:20:45.089 INFO  assignment2.BookDetailViewController : loaded book's detail
+22:20:46.097 INFO  assignment2.BookListViewController : loaded book list view
+22:20:46.099 INFO  assignment2.BookListViewController : successfully populated list
+22:22:02.394 INFO  assignment2.BookListViewController : loaded book list view
+22:22:02.395 INFO  assignment2.BookListViewController : successfully populated list
+22:22:03.191 INFO  assignment2.BookListViewController : book3 selected
+22:22:03.196 INFO  assignment2.BookDetailViewController : loaded book's detail
+22:22:04.625 INFO  assignment2.BookDetailViewController : clicked save button
+22:22:05.181 INFO  assignment2.BookDetailViewController : clicked save button
+22:22:08.018 INFO  assignment2.BookListViewController : loaded book list view
+22:22:08.018 INFO  assignment2.BookListViewController : successfully populated list
+22:34:55.387 INFO  assignment2.driver : program initialized
+22:34:57.684 INFO  assignment2.BookListViewController : loaded book list view
+22:34:57.686 INFO  assignment2.BookListViewController : successfully populated list
+22:34:58.533 INFO  assignment2.BookListViewController : book2 selected
+22:34:58.574 INFO  assignment2.BookDetailViewController : loaded book's detail
+22:36:13.327 INFO  assignment2.driver : program initialized
+22:45:55.915 INFO  assignment2.driver : program initialized
+22:47:14.272 INFO  assignment2.driver : program initialized
+22:48:55.184 INFO  assignment2.driver : program initialized
+22:52:03.049 INFO  assignment2.driver : program initialized
+22:52:04.670 INFO  assignment2.BookListViewController : loaded book list view
+22:52:04.672 INFO  assignment2.BookListViewController : successfully populated list
+22:52:06.188 INFO  assignment2.BookListViewController$1 : You clicked this: book1
+22:52:06.228 INFO  assignment2.BookDetailViewController : loaded book's detail
+22:52:08.602 INFO  assignment2.BookListViewController : loaded book list view
+22:52:08.603 INFO  assignment2.BookListViewController : successfully populated list
+22:52:11.770 INFO  assignment2.BookListViewController$1 : You clicked this: book3
+22:52:11.792 INFO  assignment2.BookDetailViewController : loaded book's detail
+22:52:14.337 INFO  assignment2.BookListViewController : loaded book list view
+22:52:14.338 INFO  assignment2.BookListViewController : successfully populated list
+22:52:15.080 INFO  assignment2.BookListViewController$1 : You clicked this: book2
+22:52:15.101 INFO  assignment2.BookDetailViewController : loaded book's detail
+22:52:16.331 INFO  assignment2.BookListViewController : loaded book list view
+22:52:16.332 INFO  assignment2.BookListViewController : successfully populated list
+22:52:17.296 INFO  assignment2.BookListViewController$1 : You clicked this: book3
+22:52:17.301 INFO  assignment2.BookDetailViewController : loaded book's detail
+22:52:18.238 INFO  assignment2.BookListViewController : loaded book list view
+22:52:18.239 INFO  assignment2.BookListViewController : successfully populated list
+22:52:18.949 INFO  assignment2.BookListViewController$1 : You clicked this: book1
+22:52:18.964 INFO  assignment2.BookDetailViewController : loaded book's detail
+22:52:19.825 INFO  assignment2.BookListViewController : loaded book list view
+22:52:19.827 INFO  assignment2.BookListViewController : successfully populated list
+22:52:20.535 INFO  assignment2.BookListViewController$1 : You clicked this: book2
+22:52:20.550 INFO  assignment2.BookDetailViewController : loaded book's detail
+22:52:22.007 INFO  assignment2.BookListViewController : loaded book list view
+22:52:22.008 INFO  assignment2.BookListViewController : successfully populated list
+22:59:33.390 INFO  assignment2.driver : program initialized
+22:59:35.289 INFO  assignment2.BookListViewController : loaded book list view
+22:59:35.291 INFO  assignment2.BookListViewController : successfully populated list
+22:59:36.148 INFO  assignment2.BookListViewController$1 : You clicked this: book1
+22:59:36.192 INFO  assignment2.BookDetailViewController : loaded book's detail
+23:01:37.943 INFO  assignment2.driver : program initialized
+23:01:39.888 INFO  assignment2.BookListViewController : loaded book list view
+23:01:39.889 INFO  assignment2.BookListViewController : successfully populated list
+23:01:41.026 INFO  assignment2.BookListViewController$1 : You clicked this: book1
+23:01:41.069 INFO  assignment2.BookDetailViewController : loaded book's detail
+23:01:44.469 INFO  assignment2.BookListViewController : loaded book list view
+23:01:44.470 INFO  assignment2.BookListViewController : successfully populated list
+23:01:45.198 INFO  assignment2.BookListViewController$1 : You clicked this: book2
+23:01:45.217 INFO  assignment2.BookDetailViewController : loaded book's detail
+23:01:46.395 INFO  assignment2.BookListViewController : loaded book list view
+23:01:46.397 INFO  assignment2.BookListViewController : successfully populated list
+23:01:47.228 INFO  assignment2.BookListViewController$1 : You clicked this: book3
+23:01:47.250 INFO  assignment2.BookDetailViewController : loaded book's detail
+23:01:50.647 INFO  assignment2.BookDetailViewController : clicked save button
+23:01:54.085 INFO  assignment2.BookDetailViewController : clicked save button
+23:01:55.135 INFO  assignment2.BookListViewController : loaded book list view
+23:01:55.136 INFO  assignment2.BookListViewController : successfully populated list
+23:01:55.830 INFO  assignment2.BookListViewController$1 : You clicked this: book2
+23:01:55.857 INFO  assignment2.BookDetailViewController : loaded book's detail
+23:01:57.053 INFO  assignment2.BookListViewController : loaded book list view
+23:01:57.054 INFO  assignment2.BookListViewController : successfully populated list
+23:01:57.649 INFO  assignment2.BookListViewController$1 : You clicked this: book3
+23:01:57.670 INFO  assignment2.BookDetailViewController : loaded book's detail
+23:01:58.646 INFO  assignment2.BookListViewController : loaded book list view
+23:01:58.646 INFO  assignment2.BookListViewController : successfully populated list

@@ -20,7 +20,7 @@
             <TextField fx:id="summary" promptText="Summary" />
             <TextField fx:id="year" promptText="Year" />
             <TextField fx:id="isbn" promptText="ISBN" />
-            <TextField fx:id="date" promptText="Date Added" />
+            <TextField fx:id="date" promptText="Date" />
          </children>
       </VBox>
    </center>

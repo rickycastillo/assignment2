@@ -9,6 +9,6 @@
       <Label text="BookListView" BorderPane.alignment="CENTER" />
    </top>
    <left>
-      <ListView fx:id="BookList" onMouseClicked="#onItemClick" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+      <ListView fx:id="BookList" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
    </left>
 </BorderPane>
