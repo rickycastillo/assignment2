@@ -1,6 +1,6 @@
 // CS 4743 Assignment 2 by Ricardo Castillo and Jaynan San Jose
 
-package assignment2;
+package main;
 
 import java.net.URL;
 

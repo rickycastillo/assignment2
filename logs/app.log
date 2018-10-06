@@ -125,3 +125,11 @@
 23:01:57.670 INFO  assignment2.BookDetailViewController : loaded book's detail
 23:01:58.646 INFO  assignment2.BookListViewController : loaded book list view
 23:01:58.646 INFO  assignment2.BookListViewController : successfully populated list
+13:56:19.326 INFO  assignment2.driver : program initialized
+13:56:22.312 INFO  assignment2.BookListViewController : loaded book list view
+13:56:22.313 INFO  assignment2.BookListViewController : successfully populated list
+13:56:23.561 INFO  assignment2.BookListViewController$1 : You clicked this: book2
+13:56:23.596 INFO  assignment2.BookDetailViewController : loaded book's detail
+13:56:25.469 INFO  assignment2.BookDetailViewController : clicked save button
+17:10:38.251 INFO  main.driver : program initialized
+17:11:43.703 INFO  main.driver : program initialized
