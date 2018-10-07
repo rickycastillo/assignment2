@@ -15,9 +15,10 @@
               <MenuItem fx:id="closeButton" mnemonicParsing="false" onAction="#onCloseClick" text="Close" />
             </items>
           </Menu>
-            <Menu mnemonicParsing="false" text="View">
+            <Menu mnemonicParsing="false" text="Books">
               <items>
-                  <MenuItem fx:id="listViewButton" mnemonicParsing="false" onAction="#onListViewClick" text="BookListView" />
+                  <MenuItem fx:id="listViewButton" mnemonicParsing="false" onAction="#onListViewClick" text="Book List" />
+                  <MenuItem fx:id="addBookButton" mnemonicParsing="false" onAction="#onAddBookClick" text="Add Book" />
               </items>
             </Menu>
         </menus>

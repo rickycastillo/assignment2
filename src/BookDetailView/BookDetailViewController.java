@@ -66,11 +66,15 @@ public class BookDetailViewController implements Initializable {
 
 		@Override
 		public void initialize(URL location, ResourceBundle resources) {
-			title.setText(selectedBook.getTitle());
-			summary.setText(selectedBook.getSummary());
-			year.setText(String.valueOf(selectedBook.getYearPublished()));
-			isbn.setText(selectedBook.getIsbn());
-			date.setText(String.valueOf(selectedBook.getDateAdded()));
+			if(selectedBook == null) {
+				title = summary = year = isbn = date = null;
+			} else {
+				title.setText(selectedBook.getTitle());
+				summary.setText(selectedBook.getSummary());
+				year.setText(String.valueOf(selectedBook.getYearPublished()));
+				isbn.setText(selectedBook.getIsbn());
+				date.setText(String.valueOf(selectedBook.getDateAdded()));
+			}
 
 			logger.info("loaded book's detail");			
 		}

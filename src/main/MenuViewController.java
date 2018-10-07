@@ -3,6 +3,7 @@ package main;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import BookDetailView.BookDetailViewController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -17,6 +18,12 @@ public class MenuViewController implements Initializable{
     @FXML
     void onListViewClick(ActionEvent event) {
     	ViewSwitcher.getInstance().switchView(1);
+    }
+    @FXML
+    void onAddBookClick(ActionEvent event) {
+    	model.Book book = new model.Book();
+    	ViewSwitcher.getInstance().switchView(2);
+    	BookDetailViewController.setBook(book);
     }
 
 	@Override

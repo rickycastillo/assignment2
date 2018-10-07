@@ -516,3 +516,39 @@
 18:02:10.913 INFO  BookDetailView.BookDetailViewController : clicked save button.. sending update
 18:02:10.985 INFO  BookDetailView.BookDetailViewController : updated book!
 18:02:12.268 INFO  main.driver : connection closed.
+18:17:04.819 INFO  main.driver : program initialized
+18:17:04.873 INFO  main.driver : Sucess!
+18:17:05.260 INFO  main.driver : connection created
+18:17:07.024 INFO  BookListView.BookListViewController : initializing book list
+18:17:07.081 INFO  BookListView.BookListViewController : loaded book list view
+18:17:07.083 INFO  BookListView.BookListViewController : successfully populated list
+18:17:09.184 INFO  main.driver : connection closed.
+18:28:50.955 INFO  main.driver : program initialized
+18:28:50.992 INFO  main.driver : Sucess!
+18:28:51.360 INFO  main.driver : connection created
+18:28:51.550 INFO  main.driver : connection closed.
+18:29:05.503 INFO  main.driver : program initialized
+18:29:05.542 INFO  main.driver : Sucess!
+18:29:05.893 INFO  main.driver : connection created
+18:29:08.272 INFO  BookListView.BookListViewController : initializing book list
+18:29:08.341 INFO  BookListView.BookListViewController : loaded book list view
+18:29:08.343 INFO  BookListView.BookListViewController : successfully populated list
+18:29:13.032 INFO  main.driver : connection closed.
+18:30:37.790 INFO  main.driver : program initialized
+18:30:37.831 INFO  main.driver : Sucess!
+18:30:38.174 INFO  main.driver : connection created
+18:30:48.306 INFO  main.driver : connection closed.
+18:32:24.363 INFO  main.driver : program initialized
+18:32:24.401 INFO  main.driver : Sucess!
+18:32:24.732 INFO  main.driver : connection created
+18:32:29.781 INFO  main.driver : connection closed.
+18:34:13.911 INFO  main.driver : program initialized
+18:34:13.955 INFO  main.driver : Sucess!
+18:34:14.297 INFO  main.driver : connection created
+18:34:16.235 INFO  BookDetailView.BookDetailViewController : test
+18:34:19.908 INFO  main.driver : connection closed.
+18:35:01.369 INFO  main.driver : program initialized
+18:35:01.415 INFO  main.driver : Sucess!
+18:35:01.750 INFO  main.driver : connection created
+18:35:03.554 INFO  BookDetailView.BookDetailViewController : loaded book's detail
+18:35:06.840 INFO  main.driver : connection closed.
