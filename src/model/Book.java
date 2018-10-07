@@ -2,6 +2,8 @@ package model;
 
 import java.time.LocalDateTime;
 
+import gateway.BookTableGateway;
+
 public class Book {
 	
 	private int id;
@@ -11,25 +13,16 @@ public class Book {
 	private String isbn;
 	private LocalDateTime dateAdded;
 	
+	private BookTableGateway gateway;
 	
 	public Book() {
 		super();
-		id = 0;
-		title = null;
-		summary = null;
-		yearPublished = 0;
-		isbn = null;
-		dateAdded = null;
 	}
 	
-	public Book(int id, String title, String summary, int yearPublished, String isbn, LocalDateTime dateAdded) {
-		this.id = id;
-		this.title = title;
-		this.summary = summary;
-		this.yearPublished = yearPublished;
-		this.isbn = isbn;
-		this.dateAdded = dateAdded;
+	public Book(BookTableGateway gateway) {
+		this.gateway = gateway;
 	}
+	
 
 	public int getId() {
 		return id;
