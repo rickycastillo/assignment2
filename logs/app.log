@@ -133,3 +133,14 @@
 13:56:25.469 INFO  assignment2.BookDetailViewController : clicked save button
 17:10:38.251 INFO  main.driver : program initialized
 17:11:43.703 INFO  main.driver : program initialized
+20:57:20.150 INFO  main.driver : program initialized
+20:57:20.770 FATAL main.driver : connectioon cant be made
+20:58:57.828 INFO  main.driver : program initialized
+20:58:57.864 INFO  main.driver : Sucess!
+20:58:58.397 FATAL main.driver : connectioon cant be made
+21:06:57.697 INFO  main.driver : program initialized
+21:06:57.734 INFO  main.driver : Sucess!
+21:06:58.469 INFO  main.driver : connection created
+21:07:50.515 INFO  main.driver : program initialized
+21:07:50.554 INFO  main.driver : Sucess!
+21:07:51.288 INFO  main.driver : connection created
