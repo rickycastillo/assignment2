@@ -12,6 +12,7 @@ import org.apache.logging.log4j.Logger;
 
 import com.mysql.cj.jdbc.MysqlDataSource;
 
+import BookDetailView.BookDetailViewController;
 import BookListView.BookListViewController;
 import gateway.DataManager;
 
@@ -37,6 +38,7 @@ public class driver extends Application{
 			logger.info("Sucess!");
 			Connection conn = ds.getConnection();
 			BookListViewController.setTheConnection(conn);
+			BookDetailViewController.setTheConnection(conn);
 			DataManager.getInstance().setConnection(conn);
 			logger.info("connection created");
 			

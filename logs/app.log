@@ -375,3 +375,37 @@
 16:29:16.328 INFO  BookListView.BookListViewController$1 : You clicked this: What Happened
 16:29:16.347 INFO  BookDetailView.BookDetailViewController : loaded book's detail
 16:29:21.654 INFO  main.driver : connection closed.
+16:31:09.877 INFO  main.driver : program initialized
+16:31:09.914 INFO  main.driver : Sucess!
+16:31:10.267 INFO  main.driver : connection created
+16:31:12.123 INFO  BookListView.BookListViewController : initializing book list
+16:31:12.170 INFO  BookListView.BookListViewController : loaded book list view
+16:31:12.170 INFO  BookListView.BookListViewController : successfully populated list
+16:31:13.127 INFO  BookListView.BookListViewController$1 : You clicked this: The Art Of The Deal
+16:31:13.147 INFO  BookDetailView.BookDetailViewController : loaded book's detail
+16:31:16.964 INFO  main.driver : connection closed.
+16:40:18.522 INFO  main.driver : program initialized
+16:40:18.584 INFO  main.driver : Sucess!
+16:40:18.979 INFO  main.driver : connection created
+16:40:20.805 INFO  BookListView.BookListViewController : initializing book list
+16:40:20.861 INFO  BookListView.BookListViewController : loaded book list view
+16:40:20.862 INFO  BookListView.BookListViewController : successfully populated list
+16:40:21.721 INFO  BookListView.BookListViewController$1 : You clicked this: Hunger Games
+16:40:21.744 INFO  BookDetailView.BookDetailViewController : loaded book's detail
+16:40:26.322 INFO  BookDetailView.BookDetailViewController : clicked save button.. sending update
+16:40:26.379 INFO  BookDetailView.BookDetailViewController : updated book!
+16:40:36.228 INFO  main.driver : connection closed.
+16:40:39.245 INFO  main.driver : program initialized
+16:40:39.292 INFO  main.driver : Sucess!
+16:40:39.672 INFO  main.driver : connection created
+16:40:41.694 INFO  BookListView.BookListViewController : initializing book list
+16:40:41.749 INFO  BookListView.BookListViewController : loaded book list view
+16:40:41.750 INFO  BookListView.BookListViewController : successfully populated list
+16:40:43.285 INFO  BookListView.BookListViewController$1 : You clicked this: The Art Of The Deal
+16:40:43.306 INFO  BookDetailView.BookDetailViewController : loaded book's detail
+16:40:45.428 INFO  BookListView.BookListViewController : initializing book list
+16:40:45.460 INFO  BookListView.BookListViewController : loaded book list view
+16:40:45.461 INFO  BookListView.BookListViewController : successfully populated list
+16:40:46.140 INFO  BookListView.BookListViewController$1 : You clicked this: Hunger Games
+16:40:46.150 INFO  BookDetailView.BookDetailViewController : loaded book's detail
+16:40:47.356 INFO  main.driver : connection closed.

@@ -1,10 +1,14 @@
 package BookDetailView;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+
+import gateway.BookTableGateway;
 import javafx.scene.control.TextField;
 import main.driver;
 
 import java.net.URL;
+import java.sql.Connection;
+import java.sql.SQLException;
 import java.util.ResourceBundle;
 
 import org.apache.logging.log4j.LogManager;
@@ -18,6 +22,10 @@ import javafx.fxml.Initializable;
 public class BookDetailViewController implements Initializable {
 		private static Logger logger = LogManager.getLogger(driver.class);
 		
+		static Connection conn;
+		
+	    BookTableGateway gateway = new BookTableGateway(conn);
+
 		private static model.Book selectedBook;
 		
 		@FXML
@@ -37,7 +45,14 @@ public class BookDetailViewController implements Initializable {
 
 	    @FXML
 	    void clickSaveButton() {
-	    	logger.info("clicked save button");
+	    	logger.info("clicked save button.. sending update");
+	    	try {
+				gateway.updateBook(selectedBook);
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+	    	logger.info("updated book!");
 	    }
 
 		@Override
@@ -54,6 +69,11 @@ public class BookDetailViewController implements Initializable {
 		public static void setBook(model.Book book) {
 			// set selected book
 			selectedBook = book;
+		}
+
+		public static void setTheConnection(Connection conn2) {
+			// TODO Auto-generated method stub
+			conn = conn2;
 		}
 
 	}
