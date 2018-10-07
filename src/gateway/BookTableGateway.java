@@ -38,7 +38,7 @@ public class BookTableGateway {
 	//Update portion of CRUD
 	public void updateBook(Book book) throws SQLException {
 		PreparedStatement st = conn.prepareStatement("update book "
-				+ " set title = ? set summary = ? set year_published = ? set isbn = ? where id = ?");
+				+ " SET title = ?, summary = ?, year_published = ?, isbn = ? where id = ?");
 		st.setString(1, book.getTitle());
 		st.setString(2, book.getSummary());
 		st.setInt(3, book.getYearPublished());
@@ -60,7 +60,6 @@ public class BookTableGateway {
 		Statement st = conn.createStatement();
 		ResultSet rs = st.executeQuery("select * from book order by id");
 		while(rs.next()) {
-			System.out.println("Am i getting anything?");
 			Book book = new Book(this);
 			book.setId(rs.getInt("id"));
 			book.setTitle(rs.getString("title"));
