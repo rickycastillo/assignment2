@@ -18,6 +18,8 @@ import javafx.fxml.Initializable;
 public class BookDetailViewController implements Initializable {
 		private static Logger logger = LogManager.getLogger(driver.class);
 		
+		private static model.Book selectedBook;
+		
 		@FXML
 	    private TextField title;
 
@@ -40,14 +42,18 @@ public class BookDetailViewController implements Initializable {
 
 		@Override
 		public void initialize(URL location, ResourceBundle resources) {
-			logger.info("loaded book's detail");
-			title = summary = year = isbn = date = null;
-			
+			title.setText(selectedBook.getTitle());
+			summary.setText(selectedBook.getSummary());
+			year.setText(String.valueOf(selectedBook.getYearPublished()));
+			isbn.setText(selectedBook.getIsbn());
+			date.setText(String.valueOf(selectedBook.getDateAdded()));
+
+			logger.info("loaded book's detail");			
 		}
 
-		public static void setBook(String selected) {
+		public static void setBook(model.Book book) {
 			// set selected book
-			
+			selectedBook = book;
 		}
 
 	}

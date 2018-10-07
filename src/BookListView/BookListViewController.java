@@ -12,6 +12,7 @@ import javafx.collections.ObservableList;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import BookDetailView.BookDetailViewController;
 import gateway.BookTableGateway;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -65,6 +66,11 @@ public class BookListViewController implements Initializable {
 				if(click.getClickCount() == 2) {
 					if(BookList.getSelectionModel().getSelectedItem() != null) {
 						logger.info("You clicked this: " + BookList.getSelectionModel().getSelectedItem());
+						for(model.Book book : books) {
+							if(BookList.getSelectionModel().getSelectedItem() == book.getTitle()) {
+								BookDetailViewController.setBook(book);
+							}
+						}
 						ViewSwitcher.getInstance().switchView(2);
 					}else {
 						logger.info("You clicked on nothing!");
