@@ -27,7 +27,7 @@ public class BookListViewController implements Initializable {
 		
 	@FXML private ListView<String> BookList;
 	
-	private ObservableList<model.Book> BooksDisplay;
+	private ObservableList<String> BooksDisplay;
 	
     private List<model.Book> books;
     
@@ -74,8 +74,11 @@ public class BookListViewController implements Initializable {
 	}
 	
     public void populate() {
-		this.BooksDisplay = FXCollections.observableArrayList(books);
-		//this.BookList.setItems(BooksDisplay);
+		//this.BooksDisplay = FXCollections.observableArrayList(books);
+    	for(model.Book book : books) {
+    		BooksDisplay.add(book.getTitle());
+    	}
+		this.BookList.setItems(BooksDisplay);
 		logger.info("successfully populated list");
     	
     }
