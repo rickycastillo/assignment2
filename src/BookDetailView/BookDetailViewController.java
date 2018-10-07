@@ -9,6 +9,8 @@ import main.driver;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ResourceBundle;
 
 import org.apache.logging.log4j.LogManager;
@@ -46,6 +48,13 @@ public class BookDetailViewController implements Initializable {
 	    @FXML
 	    void clickSaveButton() {
 	    	logger.info("clicked save button.. sending update");
+	    	
+	    	selectedBook.setTitle(title.getText());
+	    	selectedBook.setSummary(summary.getText());
+	    	selectedBook.setYearPublished(Integer.parseInt(year.getText()));
+	    	selectedBook.setIsbn(isbn.getText());
+	    	//selectedBook.setDateAdded(turnToDate(date.getText()));
+	    	
 	    	try {
 				gateway.updateBook(selectedBook);
 			} catch (SQLException e) {
@@ -74,6 +83,12 @@ public class BookDetailViewController implements Initializable {
 		public static void setTheConnection(Connection conn2) {
 			// TODO Auto-generated method stub
 			conn = conn2;
+		}
+		
+		public LocalDateTime turnToDate(String date) {
+			DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+			LocalDateTime dateTime = LocalDateTime.parse(date, formatter);
+			return dateTime;
 		}
 
 	}
