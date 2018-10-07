@@ -8,6 +8,7 @@ import java.util.ResourceBundle;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -27,7 +28,7 @@ public class BookListViewController implements Initializable {
 		
 	@FXML private ListView<String> BookList;
 	
-	private ObservableList<String> BooksDisplay;
+	private ObservableList<String> BooksDisplay = FXCollections.observableArrayList();
 	
     private List<model.Book> books;
     

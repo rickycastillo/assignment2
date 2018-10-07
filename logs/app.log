@@ -346,3 +346,14 @@
 16:05:57.844 INFO  BookListView.BookListViewController : initializing book list
 16:05:57.905 INFO  BookListView.BookListViewController : loaded book list view
 16:05:59.106 INFO  main.driver : connection closed.
+16:16:16.574 INFO  main.driver : program initialized
+16:16:16.624 INFO  main.driver : Sucess!
+16:16:16.994 INFO  main.driver : connection created
+16:16:21.730 INFO  main.driver : connection closed.
+16:18:35.250 INFO  main.driver : program initialized
+16:18:35.292 INFO  main.driver : Sucess!
+16:18:35.635 INFO  main.driver : connection created
+16:18:37.625 INFO  BookListView.BookListViewController : initializing book list
+16:18:37.669 INFO  BookListView.BookListViewController : loaded book list view
+16:18:37.670 INFO  BookListView.BookListViewController : successfully populated list
+16:18:51.788 INFO  main.driver : connection closed.
