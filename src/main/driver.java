@@ -12,6 +12,7 @@ import org.apache.logging.log4j.Logger;
 
 import com.mysql.cj.jdbc.MysqlDataSource;
 
+import BookListView.BookListViewController;
 import gateway.DataManager;
 
 import javafx.application.Application;
@@ -35,7 +36,7 @@ public class driver extends Application{
 			ds.setPassword("KF9U8nczdL7pcxuqJWC5");
 			logger.info("Sucess!");
 			Connection conn = ds.getConnection();
-
+			BookListViewController.setTheConnection(conn);
 			DataManager.getInstance().setConnection(conn);
 			logger.info("connection created");
 			
@@ -73,7 +74,7 @@ public class driver extends Application{
 		BorderPane rootPane = loader.load();
 		ViewSwitcher.getInstance().setPane(rootPane);
 		Scene scene = new Scene(rootPane);
-		stage.setTitle("Assignment 1");
+		stage.setTitle("Assignment 2");
 		stage.setScene(scene);
 		stage.show();
 	}

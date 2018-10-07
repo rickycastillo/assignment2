@@ -1,6 +1,7 @@
 package BookListView;
 import java.awt.print.Book;
 import java.net.URL;
+import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.List;
 import java.util.ResourceBundle;
@@ -29,8 +30,10 @@ public class BookListViewController implements Initializable {
 	private ObservableList<model.Book> BooksDisplay;
 	
     private List<model.Book> books;
+    
+    static Connection conn;
        
-    BookTableGateway gateway = new BookTableGateway();
+    BookTableGateway gateway = new BookTableGateway(conn);
    
 //	@FXML
 //    void onItemClick() {
@@ -76,5 +79,10 @@ public class BookListViewController implements Initializable {
 		logger.info("successfully populated list");
     	
     }
+
+	public static void setTheConnection(Connection conn2) {
+		conn = conn2;
+		
+	}
     
 }
