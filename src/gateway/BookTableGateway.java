@@ -18,10 +18,27 @@ public class BookTableGateway {
 	public BookTableGateway(Connection conn) {
 		this.conn = conn;
 	}
-	//Updates our book.
+	
+	
+	//Create portion of CRUD
+	public int insertBook(Book book) throws SQLException {
+		PreparedStatement st = conn.prepareStatement("insert into book "
+				+ "(id, title, summary, year_published, 'isbn') values ( ? ) ", PreparedStatement.RETURN_GENERATED_KEYS);
+		st.setInt(1, book.getId());
+		st.setString(2,  book.getTitle());
+		st.setString(3, book.getSummary());
+		st.setInt(4, book.getYearPublished());
+		st.setString(5, book.getIsbn());
+		st.executeUpdate();
+		ResultSet newKeys = st.getGeneratedKeys();
+		newKeys.next();
+		return newKeys.getInt(1);
+	}
+	
+	//Update portion of CRUD
 	public void updateBook(Book book) throws SQLException {
 		PreparedStatement st = conn.prepareStatement("update book "
-				+ " set title = ?, set summary = ?, set year_published = ? set isbn = ? where id = ?");
+				+ " set title = ? set summary = ? set year_published = ? set isbn = ? where id = ?");
 		st.setString(1, book.getTitle());
 		st.setString(2, book.getSummary());
 		st.setInt(3, book.getYearPublished());
@@ -33,6 +50,7 @@ public class BookTableGateway {
 	
 	
 	
+	//Read portion of CRUD.
 	public List<Book> getBooks() throws SQLException {
 		
 		
@@ -58,6 +76,14 @@ public class BookTableGateway {
 		st.close();
 		return books;
 	}
+	
+	//Delete portion of CRUD.
+	public void deleteBook(Book book) throws SQLException {
+		PreparedStatement st = conn.prepareStatement("delete from book where id = ?");
+		st.setInt(1, book.getId());
+		st.executeQuery();
+	}
+	
 	
 	public LocalDateTime turnToDate(String date) {
 		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
