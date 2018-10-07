@@ -34,10 +34,10 @@ public class ViewSwitcher {
 	public void switchView(int viewType) {
 		if(viewType == 1) {
 			try {
-				URL view = this.getClass().getResource("BookListView.fxml");
+				URL view = this.getClass().getResource("/BookListView/BookListView.fxml");
 				FXMLLoader loader = new FXMLLoader(view);
 				loader.setController(new BookListViewController());
-				Parent contentPane = loader.load();
+				Parent contentPane = loader.load();	
 				this.pane.setCenter(contentPane);
 			}catch(IOException ex) {
 				ex.printStackTrace();
@@ -46,7 +46,7 @@ public class ViewSwitcher {
 
 		if(viewType == 2) {
 			try {
-				URL view = this.getClass().getResource("BookDetailView.fxml");
+				URL view = this.getClass().getResource("/BookDetailView/BookDetailView.fxml");
 				FXMLLoader loader = new FXMLLoader(view);
 				loader.setController(new BookDetailViewController());
 				Parent contentPane = loader.load();

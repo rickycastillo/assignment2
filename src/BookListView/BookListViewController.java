@@ -41,6 +41,7 @@ public class BookListViewController implements Initializable {
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		logger.info("loaded book list view");
 		populate();
+
 	
 		//Once the list gets double clicked, update the list.
 		BookList.setOnMouseClicked(new EventHandler<MouseEvent>() {
@@ -59,7 +60,7 @@ public class BookListViewController implements Initializable {
 	}
 	
     public void populate() {
-		this.BooksDisplay = FXCollections.observableArrayList(books);
+		//this.BooksDisplay = FXCollections.observableArrayList(books);
 		//this.BookList.setItems(BooksDisplay);
 		logger.info("successfully populated list");
     	
