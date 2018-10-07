@@ -18,11 +18,6 @@ public class BookTableGateway {
 	public BookTableGateway(Connection conn) {
 		this.conn = conn;
 	}
-	
-	
-	public BookTableGateway() {
-	
-	}
 
 
 	//Create portion of CRUD
@@ -56,16 +51,16 @@ public class BookTableGateway {
 	
 	
 	//Read portion of CRUD.
-	public List<model.Book> getBooks() throws SQLException {
+	public List<Book> getBooks() throws SQLException {
 		
 		
-		List<model.Book> books = new ArrayList<model.Book>();
+		List<Book> books = new ArrayList<Book>();
 		//Our parametized query.
-		PreparedStatement st = conn.prepareStatement("select * from book order by id");
-		st.executeQuery();
-		
-		ResultSet rs = st.executeQuery(null);
+		//PreparedStatement st = conn.prepareStatement("select * from book order by id");
+		Statement st = conn.createStatement();
+		ResultSet rs = st.executeQuery("select * from book order by id");
 		while(rs.next()) {
+			System.out.println("Am i getting anything?");
 			Book book = new Book(this);
 			book.setId(rs.getInt("id"));
 			book.setTitle(rs.getString("title"));
@@ -76,6 +71,7 @@ public class BookTableGateway {
 			
 			books.add(book);
 		}
+		System.out.println("Test!\n");
 		
 		rs.close();
 		st.close();
@@ -91,7 +87,7 @@ public class BookTableGateway {
 	
 	
 	public LocalDateTime turnToDate(String date) {
-		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
 		LocalDateTime dateTime = LocalDateTime.parse(date, formatter);
 		return dateTime;
 	}
