@@ -144,6 +144,7 @@
 21:07:50.515 INFO  main.driver : program initialized
 21:07:50.554 INFO  main.driver : Sucess!
 21:07:51.288 INFO  main.driver : connection created
+<<<<<<< Updated upstream
 21:10:57.806 INFO  main.driver : program initialized
 21:10:57.852 INFO  main.driver : Sucess!
 21:10:58.366 INFO  main.driver : connection created
@@ -199,3 +200,27 @@
 21:45:43.772 INFO  main.driver : program initialized
 21:45:45.674 INFO  BookListView.BookListViewController : loaded book list view
 21:45:45.676 INFO  BookListView.BookListViewController : successfully populated list
+=======
+21:13:29.612 INFO  main.driver : program initialized
+21:28:21.016 INFO  main.driver : program initialized
+21:28:21.047 INFO  main.driver : Sucess!
+21:28:22.024 INFO  main.driver : connection created
+21:28:27.596 INFO  main.driver : connection closed.
+22:00:24.812 INFO  main.driver : program initialized
+22:00:24.845 INFO  main.driver : Sucess!
+22:00:25.496 INFO  main.driver : connection created
+22:00:26.011 INFO  main.driver : program initialized
+22:00:26.043 INFO  main.driver : Sucess!
+22:00:26.663 INFO  main.driver : connection created
+22:00:28.255 INFO  main.driver : connection closed.
+22:00:30.020 INFO  main.driver : connection closed.
+>>>>>>> Stashed changes
+22:05:35.867 INFO  main.driver : program initialized
+22:05:38.493 INFO  BookListView.BookListViewController : loaded book list view
+22:05:38.494 INFO  BookListView.BookListViewController : successfully populated list
+22:06:16.191 INFO  main.driver : program initialized
+22:06:16.223 INFO  main.driver : Sucess!
+22:06:16.865 INFO  main.driver : connection created
+22:06:19.602 INFO  BookListView.BookListViewController : loaded book list view
+22:06:19.603 INFO  BookListView.BookListViewController : successfully populated list
+22:06:21.321 INFO  main.driver : connection closed.

@@ -15,7 +15,7 @@ import javafx.scene.layout.BorderPane;
 public class ViewSwitcher {
 	private static Logger logger = LogManager.getLogger(driver.class);
 	private static ViewSwitcher switcher = null;
-	private BorderPane pane;
+	private static BorderPane pane;
 	private ViewSwitcher() {
 		
 	}
@@ -60,3 +60,4 @@ public class ViewSwitcher {
 }
 
 // if you see this ure gay
+// No, ure gay
