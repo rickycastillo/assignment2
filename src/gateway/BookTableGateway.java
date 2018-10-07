@@ -20,6 +20,11 @@ public class BookTableGateway {
 	}
 	
 	
+	public BookTableGateway() {
+	
+	}
+
+
 	//Create portion of CRUD
 	public int insertBook(Book book) throws SQLException {
 		PreparedStatement st = conn.prepareStatement("insert into book "
@@ -51,10 +56,10 @@ public class BookTableGateway {
 	
 	
 	//Read portion of CRUD.
-	public List<Book> getBooks() throws SQLException {
+	public List<model.Book> getBooks() throws SQLException {
 		
 		
-		List<Book> books = new ArrayList<Book>();
+		List<model.Book> books = new ArrayList<model.Book>();
 		//Our parametized query.
 		PreparedStatement st = conn.prepareStatement("select * from book order by id");
 		st.executeQuery();

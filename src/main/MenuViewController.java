@@ -1,6 +1,5 @@
 package main;
 
-import java.lang.reflect.InvocationTargetException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -16,7 +15,7 @@ public class MenuViewController implements Initializable{
     }
 
     @FXML
-    void onListViewClick(ActionEvent event) throws InvocationTargetException {
+    void onListViewClick(ActionEvent event) {
     	ViewSwitcher.getInstance().switchView(1);
     }
 

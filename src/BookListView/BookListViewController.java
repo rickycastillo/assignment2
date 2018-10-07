@@ -1,6 +1,7 @@
 package BookListView;
 import java.awt.print.Book;
 import java.net.URL;
+import java.sql.SQLException;
 import java.util.List;
 import java.util.ResourceBundle;
 
@@ -8,6 +9,8 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+
+import gateway.BookTableGateway;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -23,11 +26,11 @@ public class BookListViewController implements Initializable {
 		
 	@FXML private ListView<String> BookList;
 	
-	private ObservableList<Book> BooksDisplay;
+	private ObservableList<model.Book> BooksDisplay;
 	
-    private List<Book> books;
-
-	
+    private List<model.Book> books;
+       
+    BookTableGateway gateway = new BookTableGateway();
    
 //	@FXML
 //    void onItemClick() {
@@ -39,8 +42,16 @@ public class BookListViewController implements Initializable {
     
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
+		logger.info("initializing book list");
+		try {
+			books = gateway.getBooks();
+		} catch (SQLException e) {
+		// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		logger.info("loaded book list view");
-		populate();
+		if(books != null)
+			populate();
 
 	
 		//Once the list gets double clicked, update the list.
@@ -60,7 +71,7 @@ public class BookListViewController implements Initializable {
 	}
 	
     public void populate() {
-		//this.BooksDisplay = FXCollections.observableArrayList(books);
+		this.BooksDisplay = FXCollections.observableArrayList(books);
 		//this.BookList.setItems(BooksDisplay);
 		logger.info("successfully populated list");
     	
