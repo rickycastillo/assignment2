@@ -26,29 +26,31 @@ public class BookDetailViewController implements Initializable {
 		
 		static Connection conn;
 		
+		boolean newBook;
+		
 	    BookTableGateway gateway = new BookTableGateway(conn);
 
 		private static model.Book selectedBook;
 		
 		@FXML
-	    private TextField title;
+	    private TextField title = new TextField();
 
 	    @FXML
-	    private TextField summary;
+	    private TextField summary = new TextField();
 
 	    @FXML
-	    private TextField year;
+	    private TextField year = new TextField();
 
 	    @FXML
-	    private TextField isbn;
+	    private TextField isbn = new TextField();
 
 	    @FXML
-	    private TextField date;
+	    private TextField date = new TextField();
 
 	    @FXML
 	    void clickSaveButton() {
 	    	logger.info("clicked save button.. sending update");
-	    	
+
 	    	selectedBook.setTitle(title.getText());
 	    	selectedBook.setSummary(summary.getText());
 	    	selectedBook.setYearPublished(Integer.parseInt(year.getText()));
@@ -56,7 +58,12 @@ public class BookDetailViewController implements Initializable {
 	    	//selectedBook.setDateAdded(turnToDate(date.getText()));
 	    	
 	    	try {
-				gateway.updateBook(selectedBook);
+	    		if(newBook) {
+	    			gateway.insertBook(selectedBook);
+	    		}
+	    		else {
+	    			gateway.updateBook(selectedBook);
+	    		}
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -67,8 +74,9 @@ public class BookDetailViewController implements Initializable {
 		@Override
 		public void initialize(URL location, ResourceBundle resources) {
 			if(selectedBook == null) {
-				title = summary = year = isbn = date = null;
+				newBook = true;
 			} else {
+				newBook = false;
 				title.setText(selectedBook.getTitle());
 				summary.setText(selectedBook.getSummary());
 				year.setText(String.valueOf(selectedBook.getYearPublished()));
