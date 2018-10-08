@@ -884,3 +884,10 @@
 20:28:14.594 INFO  BookListView.BookListViewController : successfully populated list
 20:28:16.459 INFO  BookListView.BookListViewController : clicked delete.. 
 20:28:17.245 INFO  main.driver : connection closed.
+20:29:31.995 INFO  main.driver : program initialized
+20:29:32.036 INFO  main.driver : Sucess!
+20:29:32.380 INFO  main.driver : connection created
+20:29:34.285 INFO  BookDetailView.BookDetailViewController : loaded book's detail
+20:29:37.403 INFO  BookDetailView.BookDetailViewController : clicked save button.. sending update
+20:29:53.636 INFO  BookDetailView.BookDetailViewController : clicked save button.. sending update
+20:29:55.153 INFO  main.driver : connection closed.
