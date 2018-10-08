@@ -57,10 +57,15 @@ public class BookDetailViewController implements Initializable {
 	    @FXML
 	    void clickSaveButton() {
 	    	logger.info("clicked save button.. sending update");
-
+	    	
 	    	selectedBook.setTitle(title.getText());
 	    	selectedBook.setSummary(summary.getText());
-	    	selectedBook.setYearPublished(Integer.parseInt(year.getText()));
+	    	System.out.print(year.getText());
+	    	if(year.getText().length() < 1) {
+	    		selectedBook.setYearPublished(0000);
+	    	} else {
+	    		selectedBook.setYearPublished(Integer.parseInt(year.getText()));
+	    	}
 	    	selectedBook.setIsbn(isbn.getText());
 	    	//selectedBook.setDateAdded(turnToDate(date.getText()));
 	    	
@@ -96,6 +101,7 @@ public class BookDetailViewController implements Initializable {
 				newBook = true;
 			} else {
 				newBook = false;
+				
 				title.setText(selectedBook.getTitle());
 				summary.setText(selectedBook.getSummary());
 				year.setText(String.valueOf(selectedBook.getYearPublished()));
