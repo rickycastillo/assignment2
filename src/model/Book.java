@@ -74,11 +74,10 @@ public class Book {
 	}
 	
 	public boolean validate() {
-		
-		if((title.length() < 1 && title.length() > 255) ||
+			if((title.length() < 1 && title.length() > 255) ||
 				summary.length() > 65536 ||
 				yearPublished > Calendar.getInstance().get(Calendar.YEAR) ||
-				Integer.parseInt(isbn) > 13) {
+				isbn.length() > 13) {
 			return false;
 		}
 		
