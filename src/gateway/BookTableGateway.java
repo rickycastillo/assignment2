@@ -24,7 +24,6 @@ public class BookTableGateway {
 	public int insertBook(Book book) throws SQLException {
 		PreparedStatement st = conn.prepareStatement("insert into book "
 				+ "(title, summary, year_published, isbn) values (?, ?, ?, ?) ", PreparedStatement.RETURN_GENERATED_KEYS);
-		//st.setInt(1, book.getId());
 		st.setString(1,  book.getTitle());
 		st.setString(2, book.getSummary());
 		st.setInt(3, book.getYearPublished());

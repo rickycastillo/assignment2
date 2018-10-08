@@ -22,6 +22,7 @@ public class MenuViewController implements Initializable{
     @FXML
     void onAddBookClick(ActionEvent event) {
     	model.Book book = new model.Book();
+    	BookDetailViewController.setBookNull();
     	ViewSwitcher.getInstance().switchView(2);
     	BookDetailViewController.setBook(book);
     }

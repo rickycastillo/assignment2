@@ -105,7 +105,6 @@ public class BookDetailViewController implements Initializable {
 				date.setText(null);
 			} else {
 				newBook = false;
-				
 				title.setText(selectedBook.getTitle());
 				summary.setText(selectedBook.getSummary());
 				year.setText(String.valueOf(selectedBook.getYearPublished()));
@@ -119,6 +118,10 @@ public class BookDetailViewController implements Initializable {
 		public static void setBook(model.Book book) {
 			// set selected book
 			selectedBook = book;
+		}
+		
+		public static void setBookNull() {
+			selectedBook = null;
 		}
 
 		public static void setTheConnection(Connection conn2) {
