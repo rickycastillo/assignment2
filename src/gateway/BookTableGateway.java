@@ -23,12 +23,12 @@ public class BookTableGateway {
 	//Create portion of CRUD
 	public int insertBook(Book book) throws SQLException {
 		PreparedStatement st = conn.prepareStatement("insert into book "
-				+ "(id, title, summary, year_published, 'isbn') values ( ? ) ", PreparedStatement.RETURN_GENERATED_KEYS);
-		st.setInt(1, book.getId());
-		st.setString(2,  book.getTitle());
-		st.setString(3, book.getSummary());
-		st.setInt(4, book.getYearPublished());
-		st.setString(5, book.getIsbn());
+				+ "(title, summary, year_published, isbn) values (? ? ? ?) ", PreparedStatement.RETURN_GENERATED_KEYS);
+		//st.setInt(1, book.getId());
+		st.setString(1,  book.getTitle());
+		st.setString(2, book.getSummary());
+		st.setInt(3, book.getYearPublished());
+		st.setString(4, book.getIsbn());
 		st.executeUpdate();
 		ResultSet newKeys = st.getGeneratedKeys();
 		newKeys.next();
@@ -81,7 +81,9 @@ public class BookTableGateway {
 	public void deleteBook(Book book) throws SQLException {
 		PreparedStatement st = conn.prepareStatement("delete from book where id = ?");
 		st.setInt(1, book.getId());
-		st.executeQuery();
+		System.out.println(book.getTitle());
+		System.out.println(book.getId());
+		st.execute();
 	}
 	
 	
