@@ -28,13 +28,8 @@ public class BookDetailViewController implements Initializable {
 		private static Logger logger = LogManager.getLogger(driver.class);
 		
 		static Connection conn;
-		
 		boolean newBook;
-		
-		private int id = 0;
-		
 		private List<model.Book> books;
-		
 	    BookTableGateway gateway = new BookTableGateway(conn);
 
 		private static model.Book selectedBook;
@@ -67,13 +62,12 @@ public class BookDetailViewController implements Initializable {
 	    		selectedBook.setYearPublished(Integer.parseInt(year.getText()));
 	    	}
 	    	selectedBook.setIsbn(isbn.getText());
-	    	//selectedBook.setDateAdded(turnToDate(date.getText()));
 	    	
 	    	if (selectedBook.validate() == false) {
 	    		Alert alert = new Alert(AlertType.INFORMATION);
 	    		alert.setTitle("INPUT INCORRECT");
 	    		alert.setHeaderText(null);
-	    		alert.setContentText("Input incorrect. Please double check and try again!");
+	    		alert.setContentText("Input incorrect. Please double check 	and try again!");
 	    		alert.showAndWait();
 	    	} else {
 	    	
@@ -126,7 +120,6 @@ public class BookDetailViewController implements Initializable {
 		}
 
 		public static void setTheConnection(Connection conn2) {
-			// TODO Auto-generated method stub
 			conn = conn2;
 		}
 		

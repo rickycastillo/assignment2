@@ -1143,3 +1143,4 @@
 21:37:12.490 INFO  BookListView.BookListViewController : loaded book list view
 21:37:12.491 INFO  BookListView.BookListViewController : successfully populated list
 21:37:13.815 INFO  BookListView.BookListViewController : clicked delete.. 
+21:40:10.619 INFO  main.driver : connection closed.

@@ -33,12 +33,10 @@ public class BookListViewController implements Initializable {
 	@FXML
 	private ListView<String> BookList;
 	
+	// local variables
 	private String selected;
-	
 	private ObservableList<String> BooksDisplay = FXCollections.observableArrayList();
-	
     private List<model.Book> books;
-    
     static Connection conn;
        
     BookTableGateway gateway = new BookTableGateway(conn);
@@ -76,7 +74,6 @@ public class BookListViewController implements Initializable {
 		try {
 			books = gateway.getBooks();
 		} catch (SQLException e) {
-		// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		logger.info("loaded book list view");
@@ -106,7 +103,6 @@ public class BookListViewController implements Initializable {
 	}
 	
     public void populate() {
-		//this.BooksDisplay = FXCollections.observableArrayList(books);
     	for(model.Book book : books) {
     		BooksDisplay.add(book.getTitle());
     	}
