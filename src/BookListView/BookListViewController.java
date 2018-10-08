@@ -1,4 +1,5 @@
 package BookListView;
+import javafx.scene.control.Button;
 import java.awt.print.Book;
 import java.net.URL;
 import java.sql.Connection;
@@ -27,7 +28,14 @@ public class BookListViewController implements Initializable {
 	private static Logger logger = LogManager.getLogger(driver.class);
 //	private String selected;
 		
-	@FXML private ListView<String> BookList;
+	
+	@FXML
+	private Button deleteButton;
+	
+	@FXML
+	private ListView<String> BookList;
+	
+	private String selected;
 	
 	private ObservableList<String> BooksDisplay = FXCollections.observableArrayList();
 	
@@ -37,13 +45,29 @@ public class BookListViewController implements Initializable {
        
     BookTableGateway gateway = new BookTableGateway(conn);
    
-//	@FXML
-//    void onItemClick() {
-//		selected = BookList.getSelectionModel().getSelectedItem(); // gets selected item
-//		logger.info(selected + " selected");
-//		ViewSwitcher.getInstance().switchView(2);
-//		
-//    }
+    @FXML
+    void deleteSelectedBook(MouseEvent event) {
+    	selected = BookList.getSelectionModel().getSelectedItem(); // gets selected item
+    	logger.info("clicked delete.. ");
+    	if(selected != null) {
+    		try {
+				books = gateway.getBooks();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+    		for(model.Book book : books) {
+    			if(selected == book.getTitle()) {
+    				try {
+						gateway.deleteBook(book);
+					} catch (SQLException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+    			}
+    		}
+    	}
+    }
     
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {

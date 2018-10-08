@@ -11,6 +11,7 @@ import java.sql.Connection;
 import java.sql.SQLException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.List;
 import java.util.ResourceBundle;
 
 import org.apache.logging.log4j.LogManager;
@@ -27,6 +28,10 @@ public class BookDetailViewController implements Initializable {
 		static Connection conn;
 		
 		boolean newBook;
+		
+		private int id = 0;
+		
+		private List<model.Book> books;
 		
 	    BookTableGateway gateway = new BookTableGateway(conn);
 
@@ -59,16 +64,23 @@ public class BookDetailViewController implements Initializable {
 	    	
 	    	try {
 	    		if(newBook) {
+	    			logger.info("This is a new book... determining new ID");
+	    			books = gateway.getBooks();
+	    			for(model.Book book : books) {
+	    				id++;
+	    			}
+	    			selectedBook.setId(id);
 	    			gateway.insertBook(selectedBook);
+	    			logger.info("created book!");
 	    		}
 	    		else {
 	    			gateway.updateBook(selectedBook);
+	    			logger.info("updated book!");
 	    		}
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-	    	logger.info("updated book!");
 	    }
 
 		@Override
