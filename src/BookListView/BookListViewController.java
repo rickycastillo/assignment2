@@ -57,7 +57,7 @@ public class BookListViewController implements Initializable {
 				e.printStackTrace();
 			}
     		for(model.Book book : books) {
-    			if(selected == book.getTitle()) {
+    			if(selected.equals(book.getTitle()) == true) {
     				try {
 						gateway.deleteBook(book);
 					} catch (SQLException e) {

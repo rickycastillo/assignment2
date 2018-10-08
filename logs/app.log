@@ -891,3 +891,29 @@
 20:29:37.403 INFO  BookDetailView.BookDetailViewController : clicked save button.. sending update
 20:29:53.636 INFO  BookDetailView.BookDetailViewController : clicked save button.. sending update
 20:29:55.153 INFO  main.driver : connection closed.
+20:31:09.137 INFO  main.driver : program initialized
+20:31:09.174 INFO  main.driver : Sucess!
+20:31:09.809 INFO  main.driver : connection created
+20:31:10.087 INFO  main.driver : program initialized
+20:31:10.124 INFO  main.driver : Sucess!
+20:31:10.775 INFO  main.driver : connection created
+20:31:12.742 INFO  main.driver : connection closed.
+20:31:14.141 INFO  BookListView.BookListViewController : initializing book list
+20:31:14.224 INFO  BookListView.BookListViewController : loaded book list view
+20:31:14.224 INFO  BookListView.BookListViewController : successfully populated list
+20:31:15.729 INFO  BookListView.BookListViewController : clicked delete.. 
+20:32:52.475 INFO  BookListView.BookListViewController : initializing book list
+20:32:52.536 INFO  BookListView.BookListViewController : loaded book list view
+20:32:52.536 INFO  BookListView.BookListViewController : successfully populated list
+20:32:55.277 INFO  BookListView.BookListViewController : clicked delete.. 
+20:33:05.556 INFO  BookListView.BookListViewController : initializing book list
+20:33:05.619 INFO  BookListView.BookListViewController : loaded book list view
+20:33:05.620 INFO  BookListView.BookListViewController : successfully populated list
+20:33:07.498 INFO  BookListView.BookListViewController : clicked delete.. 
+20:35:35.583 INFO  main.driver : program initialized
+20:35:35.611 INFO  main.driver : Sucess!
+20:35:36.301 INFO  main.driver : connection created
+20:35:38.521 INFO  BookListView.BookListViewController : initializing book list
+20:35:38.602 INFO  BookListView.BookListViewController : loaded book list view
+20:35:38.603 INFO  BookListView.BookListViewController : successfully populated list
+20:35:40.310 INFO  BookListView.BookListViewController : clicked delete.. 

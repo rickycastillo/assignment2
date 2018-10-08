@@ -70,7 +70,6 @@ public class BookTableGateway {
 			
 			books.add(book);
 		}
-		System.out.println("Test!\n");
 		
 		rs.close();
 		st.close();
@@ -81,8 +80,6 @@ public class BookTableGateway {
 	public void deleteBook(Book book) throws SQLException {
 		PreparedStatement st = conn.prepareStatement("delete from book where id = ?");
 		st.setInt(1, book.getId());
-		System.out.println(book.getTitle());
-		System.out.println(book.getId());
 		st.execute();
 	}
 	
