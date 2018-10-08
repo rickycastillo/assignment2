@@ -1111,3 +1111,35 @@
 21:32:26.891 INFO  BookDetailView.BookDetailViewController : loaded book's detail
 21:32:34.456 INFO  main.driver : connection closed.
 21:32:36.789 INFO  main.driver : connection closed.
+21:36:40.391 INFO  main.driver : program initialized
+21:36:40.432 INFO  main.driver : Sucess!
+21:36:40.813 INFO  main.driver : connection created
+21:36:42.836 INFO  BookListView.BookListViewController : initializing book list
+21:36:42.888 INFO  BookListView.BookListViewController : loaded book list view
+21:36:42.889 INFO  BookListView.BookListViewController : successfully populated list
+21:36:45.524 INFO  BookListView.BookListViewController : clicked delete.. 
+21:36:47.288 INFO  BookListView.BookListViewController : clicked delete.. 
+21:36:48.722 INFO  BookListView.BookListViewController : clicked delete.. 
+21:36:50.544 INFO  BookListView.BookListViewController : clicked delete.. 
+21:36:52.275 INFO  BookListView.BookListViewController : clicked delete.. 
+21:36:53.360 INFO  BookListView.BookListViewController : clicked delete.. 
+21:36:54.686 INFO  BookListView.BookListViewController : clicked delete.. 
+21:36:55.661 INFO  BookListView.BookListViewController : clicked delete.. 
+21:36:56.798 INFO  BookListView.BookListViewController : clicked delete.. 
+21:36:57.928 INFO  BookListView.BookListViewController : clicked delete.. 
+21:37:02.175 INFO  BookDetailView.BookDetailViewController : loaded book's detail
+21:37:08.571 INFO  BookDetailView.BookDetailViewController : clicked save button.. sending update
+21:37:08.571 INFO  BookDetailView.BookDetailViewController : This is a new book... determining new ID
+21:37:08.631 INFO  BookDetailView.BookDetailViewController : created book!
+21:37:09.030 INFO  BookDetailView.BookDetailViewController : clicked save button.. sending update
+21:37:09.080 INFO  BookDetailView.BookDetailViewController : updated book!
+21:37:09.537 INFO  BookDetailView.BookDetailViewController : clicked save button.. sending update
+21:37:09.580 INFO  BookDetailView.BookDetailViewController : updated book!
+21:37:10.008 INFO  BookDetailView.BookDetailViewController : clicked save button.. sending update
+21:37:10.064 INFO  BookDetailView.BookDetailViewController : updated book!
+21:37:10.431 INFO  BookDetailView.BookDetailViewController : clicked save button.. sending update
+21:37:10.472 INFO  BookDetailView.BookDetailViewController : updated book!
+21:37:12.461 INFO  BookListView.BookListViewController : initializing book list
+21:37:12.490 INFO  BookListView.BookListViewController : loaded book list view
+21:37:12.491 INFO  BookListView.BookListViewController : successfully populated list
+21:37:13.815 INFO  BookListView.BookListViewController : clicked delete.. 
