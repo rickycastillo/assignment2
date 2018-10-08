@@ -773,3 +773,30 @@
 19:40:03.386 INFO  BookListView.BookListViewController : loaded book list view
 19:40:03.387 INFO  BookListView.BookListViewController : successfully populated list
 19:40:04.378 INFO  main.driver : connection closed.
+20:04:56.380 INFO  main.driver : program initialized
+20:04:56.430 INFO  main.driver : Sucess!
+20:04:56.787 INFO  main.driver : connection created
+20:04:58.651 INFO  BookListView.BookListViewController : initializing book list
+20:04:58.701 INFO  BookListView.BookListViewController : loaded book list view
+20:04:58.702 INFO  BookListView.BookListViewController : successfully populated list
+20:05:00.696 INFO  BookListView.BookListViewController : clicked delete.. 
+20:05:00.739 INFO  BookListView.BookListViewController : successfully populated list
+20:05:02.440 INFO  main.driver : connection closed.
+20:11:38.202 INFO  main.driver : program initialized
+20:11:38.244 INFO  main.driver : Sucess!
+20:11:38.609 INFO  main.driver : connection created
+20:11:40.522 INFO  BookListView.BookListViewController : initializing book list
+20:11:40.571 INFO  BookListView.BookListViewController : loaded book list view
+20:11:40.572 INFO  BookListView.BookListViewController : successfully populated list
+20:11:43.723 INFO  BookListView.BookListViewController : clicked delete.. 
+20:11:44.934 INFO  main.driver : connection closed.
+20:23:45.682 INFO  main.driver : program initialized
+20:23:45.721 INFO  main.driver : Sucess!
+20:23:46.156 INFO  main.driver : connection created
+20:23:48.201 INFO  BookListView.BookListViewController : initializing book list
+20:23:48.249 INFO  BookListView.BookListViewController : loaded book list view
+20:23:48.250 INFO  BookListView.BookListViewController : successfully populated list
+20:23:50.480 INFO  BookListView.BookListViewController : clicked delete.. 
+20:23:58.121 INFO  BookDetailView.BookDetailViewController : loaded book's detail
+20:24:10.161 INFO  BookDetailView.BookDetailViewController : clicked save button.. sending update
+20:24:13.822 INFO  main.driver : connection closed.

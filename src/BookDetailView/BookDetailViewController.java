@@ -3,6 +3,8 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import gateway.BookTableGateway;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.TextField;
 import main.driver;
 
@@ -62,25 +64,30 @@ public class BookDetailViewController implements Initializable {
 	    	selectedBook.setIsbn(isbn.getText());
 	    	//selectedBook.setDateAdded(turnToDate(date.getText()));
 	    	
-	    	try {
-	    		if(newBook) {
-	    			logger.info("This is a new book... determining new ID");
-	    			books = gateway.getBooks();
-	    			for(model.Book book : books) {
-	    				id++;
-	    			}
-	    			selectedBook.setId(id);
-	    			gateway.insertBook(selectedBook);
-	    			logger.info("created book!");
-	    		}
-	    		else {
-	    			gateway.updateBook(selectedBook);
-	    			logger.info("updated book!");
-	    		}
-			} catch (SQLException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
+	    	if (selectedBook.validate() == false) {
+	    		Alert alert = new Alert(AlertType.INFORMATION);
+	    		alert.setTitle("INPUT INCORRECT");
+	    		alert.setHeaderText(null);
+	    		alert.setContentText("Input incorrect. Please double check and try again!");
+	    		alert.showAndWait();
+	    	} else {
+	    	
+		    	try {
+		    		if(newBook) {
+		    			logger.info("This is a new book... determining new ID");
+		    			selectedBook.setId(id);
+		    			gateway.insertBook(selectedBook);
+		    			logger.info("created book!");
+		    		}
+		    		else {
+		    			gateway.updateBook(selectedBook);
+		    			logger.info("updated book!");
+		    		}
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+	    	}
 	    }
 
 		@Override

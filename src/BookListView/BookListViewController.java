@@ -67,6 +67,9 @@ public class BookListViewController implements Initializable {
     			}
     		}
     	}
+    	BooksDisplay.remove(selected);
+    	
+    	
     }
     
 	@Override

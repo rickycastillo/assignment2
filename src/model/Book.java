@@ -1,6 +1,7 @@
 package model;
 
 import java.time.LocalDateTime;
+import java.util.Calendar;
 
 import gateway.BookTableGateway;
 
@@ -70,6 +71,18 @@ public class Book {
 
 	public void setDateAdded(LocalDateTime dateAdded) {
 		this.dateAdded = dateAdded;
+	}
+	
+	public boolean validate() {
+		
+		if((title.length() < 1 && title.length() > 255) ||
+				summary.length() > 65536 ||
+				yearPublished > Calendar.getInstance().get(Calendar.YEAR) ||
+				Integer.parseInt(isbn) > 13) {
+			return false;
+		}
+		
+		return true;
 	}
 	
 	
