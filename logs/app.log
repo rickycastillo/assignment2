@@ -917,3 +917,28 @@
 20:35:38.602 INFO  BookListView.BookListViewController : loaded book list view
 20:35:38.603 INFO  BookListView.BookListViewController : successfully populated list
 20:35:40.310 INFO  BookListView.BookListViewController : clicked delete.. 
+20:37:20.898 INFO  main.driver : connection closed.
+20:37:23.717 INFO  main.driver : connection closed.
+20:40:50.853 INFO  main.driver : program initialized
+20:40:50.891 INFO  main.driver : Sucess!
+20:40:51.645 INFO  main.driver : connection created
+20:40:53.760 INFO  BookDetailView.BookDetailViewController : loaded book's detail
+20:41:00.402 INFO  BookDetailView.BookDetailViewController : clicked save button.. sending update
+20:41:03.042 INFO  BookDetailView.BookDetailViewController : clicked save button.. sending update
+20:43:31.242 INFO  BookDetailView.BookDetailViewController : clicked save button.. sending update
+20:45:17.437 INFO  BookDetailView.BookDetailViewController : clicked save button.. sending update
+20:45:27.274 INFO  BookDetailView.BookDetailViewController : clicked save button.. sending update
+20:45:44.130 INFO  BookDetailView.BookDetailViewController : clicked save button.. sending update
+20:46:13.376 INFO  BookDetailView.BookDetailViewController : clicked save button.. sending update
+20:46:27.451 INFO  BookDetailView.BookDetailViewController : clicked save button.. sending update
+20:46:27.452 INFO  BookDetailView.BookDetailViewController : This is a new book... determining new ID
+20:48:09.825 INFO  main.driver : program initialized
+20:48:09.863 INFO  main.driver : Sucess!
+20:48:10.651 INFO  main.driver : connection created
+20:48:13.537 INFO  BookListView.BookListViewController : initializing book list
+20:48:13.837 INFO  BookListView.BookListViewController : loaded book list view
+20:48:13.839 INFO  BookListView.BookListViewController : successfully populated list
+20:48:14.887 INFO  BookDetailView.BookDetailViewController : loaded book's detail
+20:48:23.014 INFO  BookDetailView.BookDetailViewController : clicked save button.. sending update
+20:48:23.016 INFO  BookDetailView.BookDetailViewController : This is a new book... determining new ID
+20:48:30.324 INFO  main.driver : connection closed.
