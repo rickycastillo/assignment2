@@ -907,3 +907,8 @@
 20:57:36.443 INFO  main.driver : program initialized
 20:57:36.476 INFO  main.driver : Sucess!
 20:57:37.323 INFO  main.driver : connection created
+21:02:25.798 INFO  main.driver : program initialized
+21:02:25.836 INFO  main.driver : Sucess!
+21:02:26.183 INFO  main.driver : connection created
+21:02:29.425 INFO  BookDetailView.BookDetailViewController : loaded book's detail
+21:02:30.471 INFO  main.driver : connection closed.

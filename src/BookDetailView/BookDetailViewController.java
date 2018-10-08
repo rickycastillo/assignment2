@@ -80,8 +80,7 @@ public class BookDetailViewController implements Initializable {
 		    	try {
 		    		if(newBook) {
 		    			logger.info("This is a new book... determining new ID");
-		    			selectedBook.setId(id);
-		    			gateway.insertBook(selectedBook);
+		    			selectedBook.setId(gateway.insertBook(selectedBook));
 		    			logger.info("created book!");
 		    		}
 		    		else {

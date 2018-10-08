@@ -26,9 +26,7 @@ import main.driver;
 
 public class BookListViewController implements Initializable {
 	private static Logger logger = LogManager.getLogger(driver.class);
-//	private String selected;
 		
-	
 	@FXML
 	private Button deleteButton;
 	
