@@ -98,6 +98,11 @@ public class BookDetailViewController implements Initializable {
 		public void initialize(URL location, ResourceBundle resources) {
 			if(selectedBook == null) {
 				newBook = true;
+				title.setText(null);
+				summary.setText(null);
+				year.setText(null);
+				isbn.setText(null);
+				date.setText(null);
 			} else {
 				newBook = false;
 				
