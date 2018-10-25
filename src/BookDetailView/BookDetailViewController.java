@@ -5,6 +5,7 @@ import org.apache.logging.log4j.Logger;
 import gateway.BookTableGateway;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
@@ -54,18 +55,29 @@ public class BookDetailViewController implements Initializable {
 
 	    @FXML
 	    private TextField date = new TextField();
-
+	    
+	    @FXML
+	    private ComboBox<String> comboBox;
+	    
+	    @FXML
+	    void setPublisher() {
+	    	//
+	    }
 	    @FXML
 	    void clickSaveButton() {
 	    	saved = 1;
-	    	logger.info("clicked save button.. sending update");
+	    	logger.info("clicked save button.. ");
 	    	
 	    	selectedBook.setTitle(title.getText());
 	    	selectedBook.setSummary(summary.getText());
 	    	System.out.print(year.getText());
-	    	if(year.getText().length() < 1) {
+	    	if(year.getText() == null) {
 	    		selectedBook.setYearPublished(0000);
-	    	} else {
+	    	}
+	    	else if(year.getText().length() < 1) {
+	    		selectedBook.setYearPublished(0000);
+	    	}
+	    	else {
 	    		selectedBook.setYearPublished(Integer.parseInt(year.getText()));
 	    	}
 	    	selectedBook.setIsbn(isbn.getText());
@@ -74,7 +86,7 @@ public class BookDetailViewController implements Initializable {
 	    		Alert alert = new Alert(AlertType.INFORMATION);
 	    		alert.setTitle("INPUT INCORRECT");
 	    		alert.setHeaderText(null);
-	    		alert.setContentText("Input incorrect. Please double check 	and try again!");
+	    		alert.setContentText("Input incorrect. Please double check and try again!");
 	    		alert.showAndWait();
 	    	} else {
 	    	
@@ -155,5 +167,6 @@ public class BookDetailViewController implements Initializable {
 			LocalDateTime dateTime = LocalDateTime.parse(date, formatter);
 			return dateTime;
 		}
+		
 
 	}

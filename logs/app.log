@@ -1336,3 +1336,105 @@
 13:10:08.924 INFO  BookDetailView.BookDetailViewController : clicked save button.. sending update
 13:10:19.114 INFO  BookDetailView.BookDetailViewController : clicked save button.. sending update
 13:10:25.648 INFO  main.driver : connection closed.
+13:13:39.238 INFO  main.driver : program initialized
+13:13:39.275 INFO  main.driver : Sucess!
+13:13:39.442 INFO  main.driver : connection created
+13:13:41.104 INFO  BookDetailView.BookDetailViewController : loaded book's detail
+13:13:42.158 INFO  BookDetailView.BookDetailViewController : clicked save button.. sending update
+13:13:50.059 INFO  main.driver : connection closed.
+13:15:48.694 INFO  main.driver : program initialized
+13:15:48.731 INFO  main.driver : Sucess!
+13:15:48.898 INFO  main.driver : connection created
+13:15:50.535 INFO  BookDetailView.BookDetailViewController : loaded book's detail
+13:15:51.753 INFO  BookDetailView.BookDetailViewController : clicked save button.. sending update
+13:15:56.613 INFO  main.driver : connection closed.
+13:16:59.664 INFO  main.driver : program initialized
+13:16:59.699 INFO  main.driver : Sucess!
+13:16:59.877 INFO  main.driver : connection created
+13:17:01.962 INFO  BookDetailView.BookDetailViewController : loaded book's detail
+13:17:02.692 INFO  BookDetailView.BookDetailViewController : clicked save button.. sending update
+13:17:05.587 INFO  main.driver : connection closed.
+13:17:41.491 INFO  main.driver : program initialized
+13:17:41.527 INFO  main.driver : Sucess!
+13:17:41.696 INFO  main.driver : connection created
+13:17:43.193 INFO  BookDetailView.BookDetailViewController : loaded book's detail
+13:17:44.075 INFO  BookDetailView.BookDetailViewController : clicked save button.. sending update
+13:17:48.800 INFO  main.driver : connection closed.
+13:18:30.333 INFO  main.driver : program initialized
+13:18:30.370 INFO  main.driver : Sucess!
+13:18:30.533 INFO  main.driver : connection created
+13:18:32.333 INFO  BookDetailView.BookDetailViewController : loaded book's detail
+13:18:33.178 INFO  BookDetailView.BookDetailViewController : clicked save button.. sending update
+13:18:41.137 INFO  BookDetailView.BookDetailViewController : clicked save button.. sending update
+13:18:44.668 INFO  main.driver : connection closed.
+13:21:58.638 INFO  main.driver : program initialized
+13:21:58.676 INFO  main.driver : Sucess!
+13:21:58.852 INFO  main.driver : connection created
+13:22:00.868 INFO  BookListView.BookListViewController : initializing book list
+13:22:00.894 INFO  BookListView.BookListViewController : loaded book list view
+13:22:00.895 INFO  BookListView.BookListViewController : successfully populated list
+13:22:01.844 INFO  BookDetailView.BookDetailViewController : loaded book's detail
+13:22:02.763 INFO  BookDetailView.BookDetailViewController : clicked save button.. sending update
+13:22:09.225 INFO  BookDetailView.BookDetailViewController : clicked save button.. sending update
+13:22:15.083 INFO  main.driver : connection closed.
+13:22:49.290 INFO  main.driver : program initialized
+13:22:49.336 INFO  main.driver : Sucess!
+13:22:49.505 INFO  main.driver : connection created
+13:22:51.929 INFO  BookListView.BookListViewController : initializing book list
+13:22:51.954 INFO  BookListView.BookListViewController : loaded book list view
+13:22:51.955 INFO  BookListView.BookListViewController : successfully populated list
+13:22:53.099 INFO  BookListView.BookListViewController$1 : You clicked this: What Happened
+13:22:53.116 INFO  BookDetailView.BookDetailViewController : loaded book's detail
+13:22:54.623 INFO  BookDetailView.BookDetailViewController : loaded book's detail
+13:23:38.240 INFO  BookDetailView.BookDetailViewController : clicked save button.. 
+13:23:38.240 INFO  BookDetailView.BookDetailViewController : This is a new book... determining new ID
+13:23:38.293 INFO  BookDetailView.BookDetailViewController : created book!
+13:23:41.903 INFO  BookDetailView.BookDetailViewController : clicked save button.. 
+13:23:41.926 INFO  BookDetailView.BookDetailViewController : updated book!
+13:23:43.557 INFO  BookDetailView.BookDetailViewController : clicked save button.. 
+13:23:43.585 INFO  BookDetailView.BookDetailViewController : updated book!
+13:23:45.541 INFO  BookDetailView.BookDetailViewController : loaded book's detail
+13:23:46.800 INFO  BookListView.BookListViewController : initializing book list
+13:23:46.805 INFO  BookListView.BookListViewController : loaded book list view
+13:23:46.806 INFO  BookListView.BookListViewController : successfully populated list
+13:23:59.214 INFO  BookListView.BookListViewController : initializing book list
+13:23:59.222 INFO  BookListView.BookListViewController : loaded book list view
+13:23:59.222 INFO  BookListView.BookListViewController : successfully populated list
+13:24:00.507 INFO  BookDetailView.BookDetailViewController : loaded book's detail
+13:24:01.611 INFO  BookDetailView.BookDetailViewController : clicked save button.. 
+13:24:04.212 INFO  BookDetailView.BookDetailViewController : loaded book's detail
+13:24:05.077 INFO  BookListView.BookListViewController : initializing book list
+13:24:05.083 INFO  BookListView.BookListViewController : loaded book list view
+13:24:05.084 INFO  BookListView.BookListViewController : successfully populated list
+13:24:13.531 INFO  BookListView.BookListViewController : initializing book list
+13:24:13.538 INFO  BookListView.BookListViewController : loaded book list view
+13:24:13.538 INFO  BookListView.BookListViewController : successfully populated list
+13:26:11.477 INFO  main.driver : program initialized
+13:26:11.513 INFO  main.driver : Sucess!
+13:26:11.697 INFO  main.driver : connection created
+13:26:13.264 INFO  BookDetailView.BookDetailViewController : loaded book's detail
+13:26:34.735 INFO  BookDetailView.BookDetailViewController : clicked save button.. 
+13:26:37.025 INFO  main.driver : connection closed.
+13:33:29.909 INFO  main.driver : program initialized
+13:33:29.945 INFO  main.driver : Sucess!
+13:33:30.119 INFO  main.driver : connection created
+13:33:32.927 INFO  BookDetailView.BookDetailViewController : loaded book's detail
+13:33:35.623 INFO  BookListView.BookListViewController : initializing book list
+13:33:35.649 INFO  BookListView.BookListViewController : loaded book list view
+13:33:35.650 INFO  BookListView.BookListViewController : successfully populated list
+13:33:39.820 INFO  BookDetailView.BookDetailViewController : loaded book's detail
+13:33:45.429 INFO  main.driver : connection closed.
+13:36:13.209 INFO  main.driver : program initialized
+13:36:13.243 INFO  main.driver : Sucess!
+13:36:13.413 INFO  main.driver : connection created
+13:36:16.802 INFO  main.driver : connection closed.
+13:36:26.547 INFO  main.driver : program initialized
+13:36:26.592 INFO  main.driver : Sucess!
+13:36:26.748 INFO  main.driver : connection created
+13:36:30.244 INFO  main.driver : connection closed.
+13:37:11.002 INFO  main.driver : program initialized
+13:37:11.039 INFO  main.driver : Sucess!
+13:37:11.213 INFO  main.driver : connection created
+13:37:12.906 INFO  BookDetailView.BookDetailViewController : loaded book's detail
+13:37:58.412 INFO  BookDetailView.BookDetailViewController : clicked save button.. 
+13:38:06.340 INFO  main.driver : connection closed.
