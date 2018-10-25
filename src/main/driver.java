@@ -79,6 +79,7 @@ public class driver extends Application{
 		stage.setTitle("Assignment 2");
 		stage.setScene(scene);
 		stage.show();
+		BookDetailViewController.setStage(stage);
 	}
 	
 	

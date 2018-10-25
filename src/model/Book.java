@@ -88,10 +88,10 @@ public class Book {
 	}
 	
 	public boolean validate() {
-			if((title.length() < 1 && title.length() > 255) ||
-				summary.length() > 65536 ||
-				yearPublished > Calendar.getInstance().get(Calendar.YEAR) ||
-				isbn.length() > 13) {
+			if(((title == null || title.length() < 1 || title.length() > 255)) ||
+				(summary == null || summary.length() < 1 || summary.length() > 65536) ||
+				(yearPublished < 1 || yearPublished > Calendar.getInstance().get(Calendar.YEAR)) ||
+				(isbn == null || isbn.length() < 1 || isbn.length() > 13)) {
 			return false;
 		}
 		

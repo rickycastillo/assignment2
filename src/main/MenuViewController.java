@@ -9,7 +9,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 
 public class MenuViewController implements Initializable{
-    
+	    
     @FXML
     void onCloseClick(ActionEvent event) {
     	System.exit(0);

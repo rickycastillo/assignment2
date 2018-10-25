@@ -6,6 +6,8 @@ import gateway.BookTableGateway;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
+import javafx.stage.WindowEvent;
 import main.driver;
 
 import java.net.URL;
@@ -15,6 +17,8 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.ResourceBundle;
+
+import javax.swing.JOptionPane;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -26,7 +30,9 @@ import javafx.fxml.Initializable;
 
 public class BookDetailViewController implements Initializable {
 		private static Logger logger = LogManager.getLogger(driver.class);
-		
+		private int saved;
+		private static Stage scene;
+		int dialogButton = JOptionPane.YES_NO_CANCEL_OPTION;
 		static Connection conn;
 		boolean newBook;
 		private List<model.Book> books;
@@ -51,6 +57,7 @@ public class BookDetailViewController implements Initializable {
 
 	    @FXML
 	    void clickSaveButton() {
+	    	saved = 1;
 	    	logger.info("clicked save button.. sending update");
 	    	
 	    	selectedBook.setTitle(title.getText());
@@ -91,6 +98,8 @@ public class BookDetailViewController implements Initializable {
 
 		@Override
 		public void initialize(URL location, ResourceBundle resources) {
+			saved = 0;
+			setCloseOption();
 			if(selectedBook == null) {
 				newBook = true;
 				title.setText(null);
@@ -109,8 +118,23 @@ public class BookDetailViewController implements Initializable {
 
 			logger.info("loaded book's detail");			
 		}
-
-		public static void setBook(model.Book book) {
+	void checkSaved() {
+		if(saved == 0) {
+			setCloseOption();
+		}
+	}
+	public void setCloseOption() {
+		scene.setOnCloseRequest(event -> {
+			int dialogResult = JOptionPane.showConfirmDialog (null, "Save Changes?","Warning",dialogButton);
+			if(dialogResult == JOptionPane.YES_OPTION){
+			  clickSaveButton();
+			}
+			if(dialogResult == JOptionPane.CANCEL_OPTION) {
+				event.consume();
+			}
+		});
+	}
+	public static void setBook(model.Book book) {
 			// set selected book
 			selectedBook = book;
 		}
@@ -121,6 +145,9 @@ public class BookDetailViewController implements Initializable {
 
 		public static void setTheConnection(Connection conn2) {
 			conn = conn2;
+		}
+		public static void setStage(Stage stage) {
+			scene = stage;
 		}
 		
 		public LocalDateTime turnToDate(String date) {
