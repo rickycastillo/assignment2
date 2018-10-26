@@ -13,6 +13,7 @@ public class Book {
 	private int yearPublished;
 	private String isbn;
 	private LocalDateTime dateAdded;
+	private LocalDateTime lastModified;
 	
 	private BookTableGateway gateway;
 	
@@ -23,15 +24,17 @@ public class Book {
 		yearPublished = 0;
 		isbn = null;
 		dateAdded = null;
+		lastModified = null;
 	}
 	
-	public Book(int id, String title, String summary, int yearPublished, String isbn, LocalDateTime dateAdded) {
+	public Book(int id, String title, String summary, int yearPublished, String isbn, LocalDateTime dateAdded, LocalDateTime lastModified) {
 		this.id = id;
 		this.title = title;
 		this.summary = summary;
 		this.yearPublished = yearPublished;
 		this.isbn = isbn;
 		this.dateAdded = dateAdded;
+		this.lastModified = lastModified;
 	}
 	
 	public Book(BookTableGateway gateway) {
@@ -85,6 +88,14 @@ public class Book {
 
 	public void setDateAdded(LocalDateTime dateAdded) {
 		this.dateAdded = dateAdded;
+	}
+	
+	public LocalDateTime getLastModified() {
+		return lastModified;
+	}
+	
+	public void setLastModified(LocalDateTime lastModified) {
+		this.lastModified = lastModified;
 	}
 	
 	public boolean validate() {
