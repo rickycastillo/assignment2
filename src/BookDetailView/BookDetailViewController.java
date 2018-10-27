@@ -114,10 +114,11 @@ public class BookDetailViewController implements Initializable {
 				}
 	    	}
 	    }
-
+	    // if u read this ure gay
 		@Override
 		public void initialize(URL location, ResourceBundle resources) {
 			saved = 0;
+			setCloseOption();
 			try {
 				publishers = publishergateway.getPublishers();
 			} catch (SQLException e) {
@@ -127,7 +128,6 @@ public class BookDetailViewController implements Initializable {
 			for(Publisher item : publishers) {
 				comboBox.getItems().add(item.getTitle());
 			}
-			setCloseOption();
 			if(selectedBook == null) {
 				newBook = true;
 				title.setText(null);
