@@ -27,7 +27,7 @@ public class Book {
 		isbn = null;
 		dateAdded = null;
 		lastModified = null;
-		publisher_id = null;
+		publisher_id = 0;
 	}
 	
 	public Book(int id, String title, String summary, int yearPublished, String isbn, LocalDateTime dateAdded, LocalDateTime lastModified, int publisher_id) {

@@ -1448,3 +1448,24 @@
 01:45:36.612 INFO  BookDetailView.BookDetailViewController : clicked save button.. 
 01:45:36.612 INFO  BookDetailView.BookDetailViewController : This is a new book... determining new ID
 01:45:41.339 INFO  main.driver : connection closed.
+16:45:52.534 INFO  main.driver : program initialized
+16:45:52.581 INFO  main.driver : Sucess!
+16:45:53.114 INFO  main.driver : connection created
+16:45:58.006 INFO  BookDetailView.BookDetailViewController : loaded book's detail
+16:46:02.254 INFO  main.driver : connection closed.
+16:58:58.180 INFO  main.driver : program initialized
+16:58:58.227 INFO  main.driver : Sucess!
+16:58:58.572 INFO  main.driver : connection created
+17:01:30.885 INFO  main.driver : program initialized
+17:01:30.929 INFO  main.driver : Sucess!
+17:01:31.286 INFO  main.driver : connection created
+17:01:46.174 INFO  main.driver : connection closed.
+17:02:30.988 INFO  main.driver : program initialized
+17:02:31.029 INFO  main.driver : Sucess!
+17:02:31.378 INFO  main.driver : connection created
+17:02:36.238 INFO  main.driver : connection closed.
+17:03:58.578 INFO  main.driver : connection closed.
+17:04:51.419 INFO  main.driver : program initialized
+17:04:51.463 INFO  main.driver : Sucess!
+17:04:51.805 INFO  main.driver : connection created
+17:04:54.561 INFO  main.driver : connection closed.

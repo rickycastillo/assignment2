@@ -3,6 +3,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import gateway.BookTableGateway;
+import gateway.PublisherTableGateway;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.ComboBox;
@@ -10,12 +11,14 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 import main.driver;
+import model.Publisher;
 
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
 
@@ -24,6 +27,8 @@ import javax.swing.JOptionPane;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 
@@ -37,7 +42,9 @@ public class BookDetailViewController implements Initializable {
 		static Connection conn;
 		boolean newBook;
 		private List<model.Book> books;
+		List<Publisher> publishers;
 	    BookTableGateway gateway = new BookTableGateway(conn);
+	    PublisherTableGateway publishergateway = new PublisherTableGateway(conn);
 
 		private static model.Book selectedBook;
 		
@@ -111,6 +118,15 @@ public class BookDetailViewController implements Initializable {
 		@Override
 		public void initialize(URL location, ResourceBundle resources) {
 			saved = 0;
+			try {
+				publishers = publishergateway.getPublishers();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			for(Publisher item : publishers) {
+				comboBox.getItems().add(item.getTitle());
+			}
 			setCloseOption();
 			if(selectedBook == null) {
 				newBook = true;
@@ -127,7 +143,7 @@ public class BookDetailViewController implements Initializable {
 				isbn.setText(selectedBook.getIsbn());
 				date.setText(String.valueOf(selectedBook.getDateAdded()));
 			}
-
+			
 			logger.info("loaded book's detail");			
 		}
 	void checkSaved() {
