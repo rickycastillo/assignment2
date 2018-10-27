@@ -23,13 +23,14 @@ public class PublisherTableGateway {
 		List<Publisher> publishers = new ArrayList<Publisher>();
 		//Our parametized query.
 		Statement st = conn.createStatement();
-		ResultSet rs = st.executeQuery("select * from publisher order by id");
+		ResultSet rs = st.executeQuery("select * from publisher order by publisher_id");
 		while(rs.next()) {
 			Publisher publisher = new Publisher(this);
 			publisher.setId(rs.getInt("publisher_id"));
 			publisher.setTitle(rs.getString("title"));
 			
 			publishers.add(publisher);
+			System.out.println(publisher.getId());
 		}
 		
 		rs.close();

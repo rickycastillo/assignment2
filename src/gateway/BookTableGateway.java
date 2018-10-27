@@ -23,7 +23,8 @@ public class BookTableGateway {
 		PreparedStatement st = conn.prepareStatement("select * from book where id = ?");
 		st.setInt(1, id);
 		ResultSet rs = st.executeQuery();
-		return turnToDate(rs.getString("last_modified"));
+		System.out.println(rs.getString("last_modified"));
+		return null;
 	}
 
 
@@ -77,7 +78,11 @@ public class BookTableGateway {
 			book.setYearPublished(rs.getInt("year_published"));
 			book.setIsbn(rs.getString("isbn"));
 			book.setDateAdded(turnToDate(rs.getString("date_added")));
-			book.setLastModified(turnToDate("last_modified"));
+			if(rs.getString("last_modified") == null) {
+				book.setLastModified(null);
+			}else {
+				book.setLastModified(turnToDate(rs.getString("last_modified")));
+			}
 			book.setPublisher(rs.getInt("publisher_id"));
 			books.add(book);
 		}
