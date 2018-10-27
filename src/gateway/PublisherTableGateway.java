@@ -18,7 +18,7 @@ public class PublisherTableGateway {
 		this.conn = conn;
 	}
 	
-	public List<Publisher> getBooks() throws SQLException {
+	public List<Publisher> getPublishers() throws SQLException {
 		
 		List<Publisher> publishers = new ArrayList<Publisher>();
 		//Our parametized query.

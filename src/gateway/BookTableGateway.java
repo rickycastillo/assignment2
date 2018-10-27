@@ -52,6 +52,9 @@ public class BookTableGateway {
 		st.setInt(5, book.getId());
 		
 		st.executeUpdate();
+		
+		
+		
 	}
 	
 	
