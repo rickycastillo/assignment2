@@ -115,6 +115,7 @@ public class BookDetailViewController implements Initializable {
 	    	}
 	    }
 	    // if u read this ure gay
+	    // like super gay u kno...
 		@Override
 		public void initialize(URL location, ResourceBundle resources) {
 			saved = 0;
