@@ -18,6 +18,13 @@ public class BookTableGateway {
 	public BookTableGateway(Connection conn) {
 		this.conn = conn;
 	}
+	
+	public LocalDateTime getLastModified(int id) throws SQLException{
+		PreparedStatement st = conn.prepareStatement("select * from book where id = ?");
+		st.setInt(1, id);
+		ResultSet rs = st.executeQuery();
+		return turnToDate(rs.getString("last_modified"));
+	}
 
 
 	//Create portion of CRUD
