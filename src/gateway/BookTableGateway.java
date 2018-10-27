@@ -30,11 +30,12 @@ public class BookTableGateway {
 	//Create portion of CRUD
 	public int insertBook(Book book) throws SQLException {
 		PreparedStatement st = conn.prepareStatement("insert into book "
-				+ "(title, summary, year_published, isbn) values (?, ?, ?, ?) ", PreparedStatement.RETURN_GENERATED_KEYS);
+				+ "(title, summary, year_published, isbn, publisher_id) values (?, ?, ?, ?, ?) ", PreparedStatement.RETURN_GENERATED_KEYS);
 		st.setString(1,  book.getTitle());
 		st.setString(2, book.getSummary());
 		st.setInt(3, book.getYearPublished());
 		st.setString(4, book.getIsbn());
+		st.setInt(5,  book.getPubliser());
 		st.executeUpdate();
 		ResultSet newKeys = st.getGeneratedKeys();
 		newKeys.next();
