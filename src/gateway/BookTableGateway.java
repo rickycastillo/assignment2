@@ -76,7 +76,8 @@ public class BookTableGateway {
 			book.setYearPublished(rs.getInt("year_published"));
 			book.setIsbn(rs.getString("isbn"));
 			book.setDateAdded(turnToDate(rs.getString("date_added")));
-			
+			book.setLastModified(turnToDate("last_modified"));
+			book.setPublisher(rs.getInt("publisher_id"));
 			books.add(book);
 		}
 		
