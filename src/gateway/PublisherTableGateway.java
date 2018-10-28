@@ -30,7 +30,6 @@ public class PublisherTableGateway {
 			publisher.setTitle(rs.getString("title"));
 			
 			publishers.add(publisher);
-			System.out.println(publisher.getId());
 		}
 		
 		rs.close();

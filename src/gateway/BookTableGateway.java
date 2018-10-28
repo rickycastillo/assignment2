@@ -23,8 +23,7 @@ public class BookTableGateway {
 		PreparedStatement st = conn.prepareStatement("select * from book where id = ?");
 		st.setInt(1, id);
 		ResultSet rs = st.executeQuery();
-		System.out.println(rs.getString("last_modified"));
-		return null;
+		return turnToDate(rs.getString("last_modified"));
 	}
 
 

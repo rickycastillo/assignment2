@@ -1469,6 +1469,7 @@
 17:04:51.463 INFO  main.driver : Sucess!
 17:04:51.805 INFO  main.driver : connection created
 17:04:54.561 INFO  main.driver : connection closed.
+<<<<<<< HEAD
 17:06:56.539 INFO  main.driver : program initialized
 17:06:56.585 INFO  main.driver : Sucess!
 17:06:57.222 INFO  main.driver : connection created
@@ -1635,3 +1636,22 @@
 19:05:06.683 INFO  BookListView.BookListViewController : initializing book list
 19:05:06.747 INFO  BookListView.BookListViewController : loaded book list view
 19:05:06.748 INFO  BookListView.BookListViewController : successfully populated list
+=======
+>>>>>>> parent of 3e27a0e... fixes last_modified and publisher table
+20:49:54.534 INFO  main.driver : program initialized
+20:49:54.581 INFO  main.driver : Sucess!
+20:49:55.300 INFO  main.driver : connection created
+20:49:57.241 INFO  BookListView.BookListViewController : initializing book list
+20:50:03.413 INFO  main.driver : connection closed.
+20:51:40.009 INFO  main.driver : program initialized
+20:51:40.044 INFO  main.driver : Sucess!
+20:51:40.704 INFO  main.driver : connection created
+20:51:42.331 INFO  BookListView.BookListViewController : initializing book list
+20:51:42.429 INFO  BookListView.BookListViewController : loaded book list view
+20:51:42.430 INFO  BookListView.BookListViewController : successfully populated list
+20:51:44.388 INFO  BookListView.BookListViewController$1 : You clicked this: The Haunting
+20:51:44.489 INFO  BookDetailView.BookDetailViewController : loaded book's detail
+20:51:48.674 INFO  BookListView.BookListViewController : initializing book list
+20:51:48.738 INFO  BookListView.BookListViewController : loaded book list view
+20:51:48.739 INFO  BookListView.BookListViewController : successfully populated list
+20:51:52.109 INFO  main.driver : connection closed.
