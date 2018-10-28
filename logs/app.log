@@ -1600,3 +1600,38 @@
 17:44:00.586 INFO  main.driver : connection created
 17:44:02.653 INFO  BookDetailView.BookDetailViewController : loaded book's detail
 17:44:25.437 INFO  main.driver : connection closed.
+19:01:37.904 INFO  main.driver : program initialized
+19:01:37.941 INFO  main.driver : Sucess!
+19:01:38.606 INFO  main.driver : connection created
+19:01:40.725 INFO  BookListView.BookListViewController : initializing book list
+19:01:40.835 INFO  BookListView.BookListViewController : loaded book list view
+19:01:40.836 INFO  BookListView.BookListViewController : successfully populated list
+19:01:41.694 INFO  BookListView.BookListViewController$1 : You clicked this: What Happened
+19:01:41.807 INFO  BookDetailView.BookDetailViewController : loaded book's detail
+19:01:47.801 INFO  main.driver : connection closed.
+19:03:19.274 INFO  main.driver : program initialized
+19:03:19.308 INFO  main.driver : Sucess!
+19:03:19.961 INFO  main.driver : connection created
+19:03:22.820 INFO  main.driver : connection closed.
+19:03:52.391 INFO  main.driver : program initialized
+19:03:52.419 INFO  main.driver : Sucess!
+19:03:53.059 INFO  main.driver : connection created
+19:03:54.591 INFO  main.driver : connection closed.
+19:04:48.081 INFO  main.driver : program initialized
+19:04:48.114 INFO  main.driver : Sucess!
+19:04:48.724 INFO  main.driver : connection created
+19:04:50.669 INFO  BookListView.BookListViewController : initializing book list
+19:04:50.748 INFO  BookListView.BookListViewController : loaded book list view
+19:04:50.748 INFO  BookListView.BookListViewController : successfully populated list
+19:04:53.307 INFO  BookListView.BookListViewController$1 : You clicked this: The Art Of The Deals
+19:04:53.425 INFO  BookDetailView.BookDetailViewController : loaded book's detail
+19:04:56.630 INFO  BookDetailView.BookDetailViewController : clicked save button.. 
+19:04:56.713 INFO  BookDetailView.BookDetailViewController : updated book!
+19:04:59.919 INFO  BookListView.BookListViewController : initializing book list
+19:04:59.984 INFO  BookListView.BookListViewController : loaded book list view
+19:04:59.986 INFO  BookListView.BookListViewController : successfully populated list
+19:05:00.991 INFO  BookListView.BookListViewController$1 : You clicked this: The Art Of The Deals
+19:05:01.088 INFO  BookDetailView.BookDetailViewController : loaded book's detail
+19:05:06.683 INFO  BookListView.BookListViewController : initializing book list
+19:05:06.747 INFO  BookListView.BookListViewController : loaded book list view
+19:05:06.748 INFO  BookListView.BookListViewController : successfully populated list
