@@ -10,6 +10,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
+import model.AuditTrailEntry;
 import model.Book;
 
 public class BookTableGateway {
@@ -35,23 +36,35 @@ public class BookTableGateway {
 		st.setString(2, book.getSummary());
 		st.setInt(3, book.getYearPublished());
 		st.setString(4, book.getIsbn());
-		st.setInt(5,  book.getPubliser());
+		st.setInt(5,  book.getPublisher());
 		st.executeUpdate();
 		ResultSet newKeys = st.getGeneratedKeys();
 		newKeys.next();
-		return newKeys.getInt(1);
+		
+		PreparedStatement st2 = conn.prepareStatement("insert into audit trail "
+				+ "(book_id, entry_msg) values (?, ?) ", PreparedStatement.RETURN_GENERATED_KEYS);
+		
+		int key = newKeys.getInt(1);
+		 
+		st2.setInt(1, key);
+		
+		st2.setString(2, "Book created");
+		
+		st2.executeUpdate();
+		
+		return key;
 	}
 	
 	//Update portion of CRUD
 	public void updateBook(Book book) throws SQLException {
 		PreparedStatement st = conn.prepareStatement("update book "
-				+ " SET title = ?, summary = ?, year_published = ?, isbn = ? where id = ?");
+				+ " SET title = ?, summary = ?, year_published = ?, isbn = ?, publisher_id = ? where id = ?");
 		st.setString(1, book.getTitle());
 		st.setString(2, book.getSummary());
 		st.setInt(3, book.getYearPublished());
 		st.setString(4, book.getIsbn());
 		st.setInt(5, book.getId());
-		
+		st.setInt(6, book.getPublisher());
 		st.executeUpdate();
 		
 		
@@ -99,6 +112,21 @@ public class BookTableGateway {
 	}
 	
 	
+	//Read portion of audit trail table
+	public List<AuditTrailEntry> getAuditTrail(Book book) throws SQLException{
+		List<AuditTrailEntry> audit_trails = new ArrayList<AuditTrailEntry>();
+		PreparedStatement st = conn.prepareStatement("select * from audit_trail where book_id = ?");
+		st.setInt(1, book.getId());
+		ResultSet rs = st.executeQuery();
+		
+		while(rs.next()) {
+			AuditTrailEntry entry = new AuditTrailEntry(this);
+			entry.setId(rs.getInt("id"));
+			entry.setEntryMsg(rs.getString("entry_msg"));
+			audit_trails.add(entry);
+		}
+		return audit_trails;
+	}
 	public LocalDateTime turnToDate(String date) {
 		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
 		LocalDateTime dateTime = LocalDateTime.parse(date, formatter);

@@ -1,7 +1,9 @@
 package model;
 
+import java.sql.SQLException;
 import java.time.LocalDateTime;
 import java.util.Calendar;
+import java.util.List;
 
 import gateway.BookTableGateway;
 
@@ -102,7 +104,7 @@ public class Book {
 		this.lastModified = lastModified;
 	}
 	
-	public int getPubliser() {
+	public int getPublisher() {
 		return publisher_id;
 	}
 	
@@ -119,6 +121,10 @@ public class Book {
 		}
 		
 		return true;
+	}
+	
+	public List<AuditTrailEntry> getAuditTrails() throws SQLException{
+		return gateway.getAuditTrail(this);
 	}
 	
 	
