@@ -41,7 +41,7 @@
                <VBox.margin>
                   <Insets bottom="10.0" left="30.0" right="30.0" />
                </VBox.margin></TextField>
-            <ComboBox fx:id="comboBox" onAction="#setPublisher" prefWidth="150.0" promptText="Publisher">
+            <ComboBox fx:id="comboBox" onAction="#setPublisher" prefWidth="150.0">
                <VBox.margin>
                   <Insets bottom="10.0" left="30.0" right="30.0" />
                </VBox.margin>
