@@ -41,7 +41,7 @@ public class BookTableGateway {
 		ResultSet newKeys = st.getGeneratedKeys();
 		newKeys.next();
 		
-		PreparedStatement st2 = conn.prepareStatement("insert into audit trail "
+		PreparedStatement st2 = conn.prepareStatement("insert into audit_trail "
 				+ "(book_id, entry_msg) values (?, ?) ", PreparedStatement.RETURN_GENERATED_KEYS);
 		
 		int key = newKeys.getInt(1);
