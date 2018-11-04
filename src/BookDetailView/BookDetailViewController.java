@@ -49,6 +49,7 @@ public class BookDetailViewController implements Initializable {
 	    PublisherTableGateway publishergateway = new PublisherTableGateway(conn);
 
 		private static model.Book selectedBook;
+		private static model.Book oldBook;
 		
 		@FXML
 	    private TextField title = new TextField();
@@ -72,7 +73,7 @@ public class BookDetailViewController implements Initializable {
 	    void setPublisher() {
 	    	publisher = comboBox.getValue();
 	    	for(Publisher item: publishers) {
-	    		if(item.getTitle().equals(publisher)) {
+	    		if(item.getTitle().equals(publisher) && saved == 1) {
 	    			selectedBook.setPublisher(item.getId());
 	    		}
 	    	}
@@ -82,7 +83,7 @@ public class BookDetailViewController implements Initializable {
 	    	saved = 1;
 			setOnCloseRequest();
 	    	logger.info("clicked save button.. ");
-	    //	setPublisher();
+	    	setPublisher();
 	    	selectedBook.setTitle(title.getText());
 	    	selectedBook.setSummary(summary.getText());
 	    	System.out.print(year.getText());
@@ -113,7 +114,7 @@ public class BookDetailViewController implements Initializable {
 		    			newBook = false;
 		    		}
 		    		else {
-		    			gateway.updateBook(selectedBook);
+		    			gateway.updateBook(selectedBook, oldBook);
 		    			logger.info("updated book!");
 		    		}
 				} catch (SQLException e) {
@@ -155,6 +156,15 @@ public class BookDetailViewController implements Initializable {
 				isbn.setText(selectedBook.getIsbn());
 				date.setText(String.valueOf(selectedBook.getDateAdded()));
 				comboBox.setValue(publishers.get(selectedBook.getPublisher()).getTitle());
+				
+				oldBook = new model.Book();
+				oldBook.setId(selectedBook.getId());
+				oldBook.setTitle(selectedBook.getTitle());
+				oldBook.setSummary(selectedBook.getSummary());
+				oldBook.setYearPublished(selectedBook.getYearPublished());
+				oldBook.setIsbn(selectedBook.getIsbn());
+				oldBook.setDateAdded(selectedBook.getDateAdded());
+				oldBook.setPublisher(selectedBook.getPublisher());
 			}
 			
 			logger.info("loaded book's detail");			

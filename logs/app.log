@@ -2195,3 +2195,52 @@
 18:00:51.154 INFO  BookDetailView.BookDetailViewController : clicked save button.. 
 18:00:51.155 INFO  BookDetailView.BookDetailViewController : This is a new book... determining new ID
 18:00:51.247 INFO  BookDetailView.BookDetailViewController : created book!
+18:03:29.439 INFO  main.driver : program initialized
+18:03:29.485 INFO  main.driver : Sucess!
+18:03:29.850 INFO  main.driver : connection created
+18:03:32.025 INFO  BookListView.BookListViewController : initializing book list
+18:03:32.087 INFO  BookListView.BookListViewController : loaded book list view
+18:03:32.088 INFO  BookListView.BookListViewController : successfully populated list
+18:03:32.718 INFO  BookListView.BookListViewController$1 : You clicked this: The Haunting
+18:03:32.772 INFO  BookDetailView.BookDetailViewController : loaded book's detail
+18:03:38.526 INFO  BookDetailView.BookDetailViewController : clicked save button.. 
+18:03:38.560 INFO  BookDetailView.BookDetailViewController : updated book!
+18:03:40.721 INFO  BookListView.BookListViewController : initializing book list
+18:03:40.748 INFO  BookListView.BookListViewController : loaded book list view
+18:03:40.749 INFO  BookListView.BookListViewController : successfully populated list
+18:03:41.440 INFO  BookListView.BookListViewController$1 : You clicked this: The Haunting
+18:03:41.476 INFO  BookDetailView.BookDetailViewController : loaded book's detail
+18:03:44.179 INFO  main.driver : connection closed.
+18:05:59.458 INFO  main.driver : program initialized
+18:05:59.503 INFO  main.driver : Sucess!
+18:05:59.889 INFO  main.driver : connection created
+18:06:01.985 INFO  BookListView.BookListViewController : initializing book list
+18:06:02.058 INFO  BookListView.BookListViewController : loaded book list view
+18:06:02.059 INFO  BookListView.BookListViewController : successfully populated list
+18:06:03.083 INFO  BookListView.BookListViewController$1 : You clicked this: The Haunting
+18:06:03.145 INFO  BookDetailView.BookDetailViewController : loaded book's detail
+18:06:05.282 INFO  BookDetailView.BookDetailViewController : clicked save button.. 
+18:06:05.320 INFO  BookDetailView.BookDetailViewController : updated book!
+18:06:07.084 INFO  BookListView.BookListViewController : initializing book list
+18:06:07.111 INFO  BookListView.BookListViewController : loaded book list view
+18:06:07.112 INFO  BookListView.BookListViewController : successfully populated list
+18:06:07.821 INFO  BookListView.BookListViewController$1 : You clicked this: The Haunting
+18:06:07.867 INFO  BookDetailView.BookDetailViewController : loaded book's detail
+18:06:11.424 INFO  BookDetailView.BookDetailViewController : clicked save button.. 
+18:06:11.449 INFO  BookDetailView.BookDetailViewController : updated book!
+18:06:23.235 INFO  BookListView.BookListViewController : initializing book list
+18:06:23.263 INFO  BookListView.BookListViewController : loaded book list view
+18:06:23.263 INFO  BookListView.BookListViewController : successfully populated list
+18:06:23.986 INFO  BookListView.BookListViewController$1 : You clicked this: The Haunting
+18:06:24.022 INFO  BookDetailView.BookDetailViewController : loaded book's detail
+18:06:28.740 INFO  main.driver : connection closed.
+18:06:47.442 INFO  main.driver : program initialized
+18:06:47.486 INFO  main.driver : Sucess!
+18:06:47.895 INFO  main.driver : connection created
+18:06:49.429 INFO  BookListView.BookListViewController : initializing book list
+18:06:49.492 INFO  BookListView.BookListViewController : loaded book list view
+18:06:49.493 INFO  BookListView.BookListViewController : successfully populated list
+18:06:50.845 INFO  BookListView.BookListViewController$1 : You clicked this: The Haunting
+18:06:50.897 INFO  BookDetailView.BookDetailViewController : loaded book's detail
+18:06:57.116 INFO  BookDetailView.BookDetailViewController : clicked save button.. 
+18:06:57.151 INFO  BookDetailView.BookDetailViewController : updated book!
