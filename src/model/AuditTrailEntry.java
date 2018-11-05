@@ -8,9 +8,9 @@ public class AuditTrailEntry {
 	
 	private int id;
 	private String entry_msg;
-	private LocalDateTime dateAdded;
 	
 	private BookTableGateway gateway;
+	private LocalDateTime dateAdded;
 	
 	public AuditTrailEntry() {
 		id = 0;
@@ -28,19 +28,10 @@ public class AuditTrailEntry {
 	
 	public void setId(int id) {
 		this.id = id;
-	}	
+	}
 	
 	public int getId() {
 		return id;
-	}
-	
-	
-	public void setDateAdded(LocalDateTime dateAdded) {
-		this.dateAdded = dateAdded;
-	}
-	
-	public LocalDateTime getDateAdded () {
-		return dateAdded;
 	}
 	
 	public void setEntryMsg(String entry_msg) {
@@ -49,6 +40,11 @@ public class AuditTrailEntry {
 	
 	public String getEntryMsg() {
 		return entry_msg;
+	}
+
+	public void setDateAdded(LocalDateTime dateAdded) {
+		this.dateAdded = dateAdded;
+		
 	}
 	
 }

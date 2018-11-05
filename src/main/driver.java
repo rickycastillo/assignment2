@@ -76,7 +76,7 @@ public class driver extends Application{
 		BorderPane rootPane = loader.load();
 		ViewSwitcher.getInstance().setPane(rootPane);
 		Scene scene = new Scene(rootPane);
-		stage.setTitle("Assignment 2");
+		stage.setTitle("Assignment 3");
 		stage.setScene(scene);
 		stage.show();
 		BookDetailViewController.setStage(stage);
