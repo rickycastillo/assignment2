@@ -3393,3 +3393,21 @@
 22:58:57.684 INFO  main.driver : Sucess!
 22:58:57.844 INFO  main.driver : connection created
 22:58:59.361 INFO  main.driver : connection closed.
+23:05:01.395 INFO  main.driver : program initialized
+23:05:01.431 INFO  main.driver : Sucess!
+23:05:01.784 INFO  main.driver : connection created
+23:05:03.259 INFO  BookListView.BookListViewController : initializing book list
+23:05:03.322 INFO  BookListView.BookListViewController : loaded book list view
+23:05:03.323 INFO  BookListView.BookListViewController : successfully populated list
+23:05:05.450 INFO  BookListView.BookListViewController$1 : You clicked this: The Evil Door 2
+23:05:05.505 INFO  BookDetailView.BookDetailViewController : loaded book's detail
+23:05:07.249 INFO  BookDetailView.BookDetailViewController : clicked save button.. 
+23:06:47.825 INFO  main.driver : program initialized
+23:06:47.863 INFO  main.driver : Sucess!
+23:06:48.210 INFO  main.driver : connection created
+23:06:51.105 INFO  BookListView.BookListViewController : initializing book list
+23:06:51.171 INFO  BookListView.BookListViewController : loaded book list view
+23:06:51.172 INFO  BookListView.BookListViewController : successfully populated list
+23:06:51.976 INFO  BookListView.BookListViewController$1 : You clicked this: The Evil Door 2
+23:06:52.029 INFO  BookDetailView.BookDetailViewController : loaded book's detail
+23:06:55.139 INFO  main.driver : connection closed.

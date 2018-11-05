@@ -208,8 +208,8 @@ public class BookDetailViewController implements Initializable {
 				oldBook.setIsbn(selectedBook.getIsbn());
 				oldBook.setDateAdded(selectedBook.getDateAdded());
 				oldBook.setPublisherID(selectedBook.getPublisherID());
-				oldBook.setPublisher(selectedBook.getPublisher());
-			}
+				oldBook.setPublisher(publishers.get(selectedBook.getPublisherID()-1).getTitle());
+							}
 			
 			logger.info("loaded book's detail");			
 		}
@@ -256,8 +256,7 @@ public class BookDetailViewController implements Initializable {
 			if(saved == 0) {
 				int dialogResult = JOptionPane.showConfirmDialog (null, "Save Changes?","Warning",dialogButton);
 				if(dialogResult == JOptionPane.YES_OPTION){
-					//BookDetailViewController controller = new BookDetailViewController();
-					//controller.clickSaveButton();
+					//getInstance().clickSaveButton();
 					saved = -1;
 					return -1;
 				} else if(dialogResult == JOptionPane.CANCEL_OPTION){
