@@ -56,16 +56,59 @@ public class BookTableGateway {
 	}
 	
 	//Update portion of CRUD
-	public void updateBook(Book book) throws SQLException {
+	public void updateBook(Book newBook, Book oldBook) throws SQLException {
 		PreparedStatement st = conn.prepareStatement("update book "
 				+ " SET title = ?, summary = ?, year_published = ?, isbn = ?, publisher_id = ? where id = ?");
-		st.setString(1, book.getTitle());
-		st.setString(2, book.getSummary());
-		st.setInt(3, book.getYearPublished());
-		st.setString(4, book.getIsbn());
-		st.setInt(5, book.getId());
-		st.setInt(6, book.getPublisher());
+		st.setString(1, newBook.getTitle());
+		st.setString(2, newBook.getSummary());
+		st.setInt(3, newBook.getYearPublished());
+		st.setString(4, newBook.getIsbn());
+		st.setInt(5, newBook.getPublisher());
+		st.setInt(6, newBook.getId());
 		st.executeUpdate();
+		
+		PreparedStatement st2;
+		
+		if (oldBook.getIsbn().equals(newBook.getIsbn()) == false) {
+			st2 = conn.prepareStatement("insert into audit_trail "
+					+ "(book_id, entry_msg) values (?, ?) ", PreparedStatement.RETURN_GENERATED_KEYS);
+			st2.setInt(1, newBook.getId());
+			st2.setString(2, "isbn changed from " + oldBook.getIsbn() + " to " + newBook.getIsbn());
+			st2.executeUpdate();
+		}
+		
+		if (oldBook.getTitle().equals(newBook.getTitle()) == false) {
+			st2 = conn.prepareStatement("insert into audit_trail "
+					+ "(book_id, entry_msg) values (?, ?) ", PreparedStatement.RETURN_GENERATED_KEYS);
+			st2.setInt(1, newBook.getId());
+			st2.setString(2, "title changed from " + oldBook.getTitle() + " to " + newBook.getTitle());
+			st2.executeUpdate();
+		}
+		
+		if (oldBook.getPublisher() != newBook.getPublisher()) {
+			st2 = conn.prepareStatement("insert into audit_trail "
+					+ "(book_id, entry_msg) values (?, ?) ", PreparedStatement.RETURN_GENERATED_KEYS);
+			st2.setInt(1, newBook.getId());
+			st2.setString(2, "Publisher changed from " + oldBook.getPublisher() + " to " + newBook.getPublisher());
+			st2.executeUpdate();
+		}
+		
+		if (oldBook.getYearPublished() != newBook.getYearPublished()) {
+			st2 = conn.prepareStatement("insert into audit_trail "
+					+ "(book_id, entry_msg) values (?, ?) ", PreparedStatement.RETURN_GENERATED_KEYS);
+			st2.setInt(1, newBook.getId());
+			st2.setString(2, "Year Published changed from " + oldBook.getYearPublished() + " to " + newBook.getYearPublished());
+			st2.executeUpdate();
+		}
+		
+		if (oldBook.getSummary().equals(newBook.getSummary()) ==  false) {
+			st2 = conn.prepareStatement("insert into audit_trail "
+					+ "(book_id, entry_msg) values (?, ?) ", PreparedStatement.RETURN_GENERATED_KEYS);
+			st2.setInt(1, newBook.getId());
+			st2.setString(2, "Summary changed from " + oldBook.getSummary() + " to " + newBook.getSummary());
+			st2.executeUpdate();
+		}
+		
 		
 		
 		
