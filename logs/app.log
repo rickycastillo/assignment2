@@ -3325,3 +3325,39 @@
 22:38:31.642 INFO  BookListView.BookListViewController : initializing book list
 22:38:31.649 INFO  BookListView.BookListViewController : loaded book list view
 22:38:31.650 INFO  BookListView.BookListViewController : successfully populated list
+22:39:37.839 INFO  main.driver : program initialized
+22:39:37.886 INFO  main.driver : Sucess!
+22:39:38.259 INFO  main.driver : connection created
+22:39:39.727 INFO  BookListView.BookListViewController : initializing book list
+22:39:39.789 INFO  BookListView.BookListViewController : loaded book list view
+22:39:39.790 INFO  BookListView.BookListViewController : successfully populated list
+22:39:40.638 INFO  BookListView.BookListViewController$1 : You clicked this: The Adventures of Rayman
+22:39:40.694 INFO  BookDetailView.BookDetailViewController : loaded book's detail
+22:39:41.517 INFO  BookDetailView.BookDetailViewController : clicked save button.. 
+22:39:41.601 INFO  BookDetailView.BookDetailViewController : updated book!
+22:39:47.422 INFO  main.driver : program initialized
+22:39:47.484 INFO  main.driver : Sucess!
+22:39:47.891 INFO  main.driver : connection created
+22:39:50.718 INFO  BookListView.BookListViewController : initializing book list
+22:39:50.780 INFO  BookListView.BookListViewController : loaded book list view
+22:39:50.780 INFO  BookListView.BookListViewController : successfully populated list
+22:39:51.549 INFO  BookListView.BookListViewController$1 : You clicked this: The Legend of Mr. Poopy Butthole
+22:39:51.608 INFO  BookDetailView.BookDetailViewController : loaded book's detail
+22:39:53.584 INFO  BookListView.BookListViewController : initializing book list
+22:39:53.614 INFO  BookListView.BookListViewController : loaded book list view
+22:39:53.614 INFO  BookListView.BookListViewController : successfully populated list
+22:39:55.282 INFO  BookListView.BookListViewController$1 : You clicked this: The Legend of Mr. Poopy Butthole
+22:39:55.319 INFO  BookDetailView.BookDetailViewController : loaded book's detail
+22:40:15.518 INFO  BookDetailView.BookDetailViewController : clicked save button.. 
+22:40:15.668 INFO  BookDetailView.BookDetailViewController : updated book!
+22:40:19.248 INFO  BookDetailView.BookDetailViewController : dates don't match
+22:40:30.013 INFO  main.driver : connection closed.
+22:42:49.493 INFO  main.driver : program initialized
+22:42:49.536 INFO  main.driver : Sucess!
+22:42:49.893 INFO  main.driver : connection created
+22:42:51.500 INFO  BookListView.BookListViewController : initializing book list
+22:42:51.563 INFO  BookListView.BookListViewController : loaded book list view
+22:42:51.563 INFO  BookListView.BookListViewController : successfully populated list
+22:42:52.145 INFO  BookListView.BookListViewController$1 : You clicked this: The Legend of Mr. Poopy Butthole
+22:42:52.204 INFO  BookDetailView.BookDetailViewController : loaded book's detail
+22:43:04.375 INFO  main.driver : connection closed.

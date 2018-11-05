@@ -2,6 +2,8 @@ package BookDetailView;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import com.mysql.cj.protocol.Protocol.GetProfilerEventHandlerInstanceFunction;
+
 import AuditTrail.AuditTrailController;
 import gateway.BookTableGateway;
 import gateway.PublisherTableGateway;
