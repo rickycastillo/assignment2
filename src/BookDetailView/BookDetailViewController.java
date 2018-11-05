@@ -141,6 +141,13 @@ public class BookDetailViewController implements Initializable {
 	    private void checkLastModified() {
 	    	if(selectedBook.getLastModified() == null) return;
 	    	
+	    	try {
+				lastModified = gateway.getLastModified(selectedBook.getId());
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+	    	
 	    	System.out.println(lastModified);
 	    	System.out.println(selectedBook.getLastModified());
 
@@ -190,7 +197,6 @@ public class BookDetailViewController implements Initializable {
 				isbn.setText(selectedBook.getIsbn());
 				date.setText(String.valueOf(selectedBook.getDateAdded()));
 				comboBox.setValue(publishers.get(selectedBook.getPublisherID()-1).getTitle());
-				lastModified = selectedBook.getLastModified();
 				
 				oldBook = new model.Book();
 				oldBook.setId(selectedBook.getId());
