@@ -3361,3 +3361,35 @@
 22:42:52.145 INFO  BookListView.BookListViewController$1 : You clicked this: The Legend of Mr. Poopy Butthole
 22:42:52.204 INFO  BookDetailView.BookDetailViewController : loaded book's detail
 22:43:04.375 INFO  main.driver : connection closed.
+22:57:15.219 INFO  main.driver : program initialized
+22:57:15.246 INFO  main.driver : Sucess!
+22:57:15.460 INFO  main.driver : connection created
+22:57:16.949 INFO  BookListView.BookListViewController : initializing book list
+22:57:16.986 INFO  BookListView.BookListViewController : loaded book list view
+22:57:16.987 INFO  BookListView.BookListViewController : successfully populated list
+22:57:18.220 INFO  BookListView.BookListViewController$1 : You clicked this: The Legend of Mr. Poopy Butthole
+22:57:18.245 INFO  BookDetailView.BookDetailViewController : loaded book's detail
+22:58:02.624 INFO  main.driver : connection closed.
+22:58:12.642 INFO  main.driver : program initialized
+22:58:12.669 INFO  main.driver : Sucess!
+22:58:12.828 INFO  main.driver : connection created
+22:58:14.145 INFO  BookListView.BookListViewController : initializing book list
+22:58:14.185 INFO  BookListView.BookListViewController : loaded book list view
+22:58:14.186 INFO  BookListView.BookListViewController : successfully populated list
+22:58:15.389 INFO  BookListView.BookListViewController$1 : You clicked this: The Haunting5
+22:58:15.426 INFO  BookDetailView.BookDetailViewController : loaded book's detail
+22:58:20.588 INFO  AuditTrail.AuditTrailController : pressed back button
+22:58:20.603 INFO  BookDetailView.BookDetailViewController : loaded book's detail
+22:58:24.073 INFO  BookListView.BookListViewController : initializing book list
+22:58:24.084 INFO  BookListView.BookListViewController : loaded book list view
+22:58:24.084 INFO  BookListView.BookListViewController : successfully populated list
+22:58:25.227 INFO  BookListView.BookListViewController$1 : You clicked this: The Legend of Mr. Poopy Butthole
+22:58:25.253 INFO  BookDetailView.BookDetailViewController : loaded book's detail
+22:58:30.113 INFO  AuditTrail.AuditTrailController : pressed back button
+22:58:30.220 INFO  BookDetailView.BookDetailViewController : loaded book's detail
+22:58:31.261 INFO  BookDetailView.BookDetailViewController : loaded book's detail
+22:58:32.983 INFO  main.driver : connection closed.
+22:58:57.659 INFO  main.driver : program initialized
+22:58:57.684 INFO  main.driver : Sucess!
+22:58:57.844 INFO  main.driver : connection created
+22:58:59.361 INFO  main.driver : connection closed.

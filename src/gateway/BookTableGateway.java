@@ -167,7 +167,7 @@ public class BookTableGateway {
 	//Read portion of audit trail table
 	public List<AuditTrailEntry> getAuditTrail(Book book) throws SQLException{
 		List<AuditTrailEntry> audit_trails = new ArrayList<AuditTrailEntry>();
-		PreparedStatement st = conn.prepareStatement("select * from audit_trail where book_id = ?");
+		PreparedStatement st = conn.prepareStatement("select * from audit_trail where book_id = ? order by date_added asc");
 		st.setInt(1, book.getId());
 		ResultSet rs = st.executeQuery();
 		
