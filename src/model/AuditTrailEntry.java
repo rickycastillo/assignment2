@@ -1,11 +1,14 @@
 package model;
 
+import java.time.LocalDateTime;
+
 import gateway.BookTableGateway;
 
 public class AuditTrailEntry {
 	
 	private int id;
 	private String entry_msg;
+	private LocalDateTime dateAdded;
 	
 	private BookTableGateway gateway;
 	
@@ -25,10 +28,19 @@ public class AuditTrailEntry {
 	
 	public void setId(int id) {
 		this.id = id;
-	}
+	}	
 	
 	public int getId() {
 		return id;
+	}
+	
+	
+	public void setDateAdded(LocalDateTime dateAdded) {
+		this.dateAdded = dateAdded;
+	}
+	
+	public LocalDateTime getDateAdded () {
+		return dateAdded;
 	}
 	
 	public void setEntryMsg(String entry_msg) {

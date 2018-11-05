@@ -142,13 +142,14 @@ public class BookTableGateway {
 			books.add(book);
 		}
 		
-		rs.close();
 		st.close();
 		return books;
 	}
 	
 	//Delete portion of CRUD.
 	public void deleteBook(Book book) throws SQLException {
+		
+		//deletes the audit trail
 		PreparedStatement st1 = conn.prepareStatement("delete from audit_trail where book_id = ?");
 		st1.setInt(1, book.getId());
 		st1.execute();
@@ -170,6 +171,7 @@ public class BookTableGateway {
 			AuditTrailEntry entry = new AuditTrailEntry(this);
 			entry.setId(rs.getInt("id"));
 			entry.setEntryMsg(rs.getString("entry_msg"));
+			entry.setDateAdded(turnToDate(rs.getString("date_added")));
 			audit_trails.add(entry);
 		}
 		return audit_trails;
