@@ -139,6 +139,8 @@ public class BookDetailViewController implements Initializable {
 	    	}
 	    }
 	    private void checkLastModified() {
+	    	if(selectedBook.getLastModified() == null) return;
+	    	
 	    	System.out.println(lastModified);
 	    	System.out.println(selectedBook.getLastModified());
 
