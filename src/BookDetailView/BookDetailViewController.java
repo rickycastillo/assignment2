@@ -2,6 +2,7 @@ package BookDetailView;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import AuditTrail.AuditTrailController;
 import gateway.BookTableGateway;
 import gateway.PublisherTableGateway;
 import javafx.scene.control.Alert;
@@ -11,6 +12,7 @@ import javafx.scene.control.SingleSelectionModel;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
+import main.ViewSwitcher;
 import main.driver;
 import model.Publisher;
 
@@ -68,6 +70,12 @@ public class BookDetailViewController implements Initializable {
 	    
 	    @FXML
 	    private ComboBox<String> comboBox;
+	    
+	    @FXML
+	    void loadAuditTrail() {
+	    	AuditTrailController.setBook(selectedBook);
+	    	ViewSwitcher.getInstance().switchView(3);
+	    }
 	    
 	    @FXML
 	    void setPublisher() {
@@ -156,7 +164,7 @@ public class BookDetailViewController implements Initializable {
 				year.setText(String.valueOf(selectedBook.getYearPublished()));
 				isbn.setText(selectedBook.getIsbn());
 				date.setText(String.valueOf(selectedBook.getDateAdded()));
-				comboBox.setValue(publishers.get(selectedBook.getPublisherID()).getTitle());
+				comboBox.setValue(publishers.get(selectedBook.getPublisherID()-1).getTitle());
 				
 				oldBook = new model.Book();
 				oldBook.setId(selectedBook.getId());
@@ -213,8 +221,8 @@ public class BookDetailViewController implements Initializable {
 			if(saved == 0) {
 				int dialogResult = JOptionPane.showConfirmDialog (null, "Save Changes?","Warning",dialogButton);
 				if(dialogResult == JOptionPane.YES_OPTION){
-					BookDetailViewController controller = new BookDetailViewController();
-					controller.clickSaveButton();
+					//BookDetailViewController controller = new BookDetailViewController();
+					//controller.clickSaveButton();
 					saved = -1;
 					return -1;
 				} else if(dialogResult == JOptionPane.CANCEL_OPTION){

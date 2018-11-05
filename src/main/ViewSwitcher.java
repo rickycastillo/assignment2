@@ -2,6 +2,7 @@ package main;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import AuditTrail.AuditTrailController;
 import BookDetailView.BookDetailViewController;
 import BookListView.BookListViewController;
 
@@ -49,6 +50,17 @@ public class ViewSwitcher {
 				URL view = this.getClass().getResource("/BookDetailView/BookDetailView.fxml");
 				FXMLLoader loader = new FXMLLoader(view);
 				loader.setController(new BookDetailViewController());
+				Parent contentPane = loader.load();
+				this.pane.setCenter(contentPane);
+			}catch(IOException ex) {
+				ex.printStackTrace();
+			}
+		}
+		if(viewType == 3) {
+			try {
+				URL view = this.getClass().getResource("/AuditTrail/AuditTrailView.fxml");
+				FXMLLoader loader = new FXMLLoader(view);
+				loader.setController(new AuditTrailController());
 				Parent contentPane = loader.load();
 				this.pane.setCenter(contentPane);
 			}catch(IOException ex) {
