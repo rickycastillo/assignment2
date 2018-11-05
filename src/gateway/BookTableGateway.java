@@ -149,9 +149,13 @@ public class BookTableGateway {
 	
 	//Delete portion of CRUD.
 	public void deleteBook(Book book) throws SQLException {
-		PreparedStatement st = conn.prepareStatement("delete from book where id = ?");
-		st.setInt(1, book.getId());
-		st.execute();
+		PreparedStatement st1 = conn.prepareStatement("delete from audit_trail where book_id = ?");
+		st1.setInt(1, book.getId());
+		st1.execute();
+		
+		PreparedStatement st2 = conn.prepareStatement("delete from book where id = ?");
+		st2.setInt(1, book.getId());
+		st2.execute();
 	}
 	
 	
