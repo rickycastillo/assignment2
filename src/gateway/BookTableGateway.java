@@ -36,7 +36,7 @@ public class BookTableGateway {
 		st.setString(2, book.getSummary());
 		st.setInt(3, book.getYearPublished());
 		st.setString(4, book.getIsbn());
-		st.setInt(5,  book.getPublisher());
+		st.setInt(5,  book.getPublisherID());
 		st.executeUpdate();
 		ResultSet newKeys = st.getGeneratedKeys();
 		newKeys.next();
@@ -63,7 +63,7 @@ public class BookTableGateway {
 		st.setString(2, newBook.getSummary());
 		st.setInt(3, newBook.getYearPublished());
 		st.setString(4, newBook.getIsbn());
-		st.setInt(5, newBook.getPublisher());
+		st.setInt(5, newBook.getPublisherID());
 		st.setInt(6, newBook.getId());
 		st.executeUpdate();
 		
@@ -138,7 +138,7 @@ public class BookTableGateway {
 			}else {
 				book.setLastModified(turnToDate(rs.getString("last_modified")));
 			}
-			book.setPublisher(rs.getInt("publisher_id"));
+			book.setPublisherID(rs.getInt("publisher_id"));
 			books.add(book);
 		}
 		

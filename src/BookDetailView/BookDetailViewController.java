@@ -74,7 +74,8 @@ public class BookDetailViewController implements Initializable {
 	    	publisher = comboBox.getValue();
 	    	for(Publisher item: publishers) {
 	    		if(item.getTitle().equals(publisher) && saved == 1) {
-	    			selectedBook.setPublisher(item.getId());
+	    			selectedBook.setPublisherID(item.getId());
+	    			selectedBook.setPublisher(item.getTitle());
 	    		}
 	    	}
 	    }
@@ -155,7 +156,7 @@ public class BookDetailViewController implements Initializable {
 				year.setText(String.valueOf(selectedBook.getYearPublished()));
 				isbn.setText(selectedBook.getIsbn());
 				date.setText(String.valueOf(selectedBook.getDateAdded()));
-				comboBox.setValue(publishers.get(selectedBook.getPublisher()).getTitle());
+				comboBox.setValue(publishers.get(selectedBook.getPublisherID()).getTitle());
 				
 				oldBook = new model.Book();
 				oldBook.setId(selectedBook.getId());

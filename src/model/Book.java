@@ -10,6 +10,7 @@ import gateway.BookTableGateway;
 public class Book {
 	
 	private int id;
+	private String publisher;
 	private String title;
 	private String summary;
 	private int yearPublished;
@@ -30,9 +31,10 @@ public class Book {
 		dateAdded = null;
 		lastModified = null;
 		publisher_id = 0;
+		publisher = null;
 	}
 	
-	public Book(int id, String title, String summary, int yearPublished, String isbn, LocalDateTime dateAdded, LocalDateTime lastModified, int publisher_id) {
+	public Book(int id, String title, String summary, int yearPublished, String isbn, LocalDateTime dateAdded, LocalDateTime lastModified, int publisher_id, String publisher) {
 		this.id = id;
 		this.title = title;
 		this.summary = summary;
@@ -41,6 +43,7 @@ public class Book {
 		this.dateAdded = dateAdded;
 		this.lastModified = lastModified;
 		this.publisher_id = publisher_id;
+		this.publisher = publisher;
 	}
 	
 	public Book(BookTableGateway gateway) {
@@ -104,12 +107,20 @@ public class Book {
 		this.lastModified = lastModified;
 	}
 	
-	public int getPublisher() {
+	public int getPublisherID() {
 		return publisher_id;
 	}
 	
-	public void setPublisher(int publisher_id) {
+	public void setPublisherID(int publisher_id) {
 		this.publisher_id = publisher_id;
+	}
+	
+	public String getPublisher() {
+		return publisher;
+	}
+	
+	public void setPublisher(String publisher) {
+		this.publisher = publisher;
 	}
 	
 	public boolean validate() {
