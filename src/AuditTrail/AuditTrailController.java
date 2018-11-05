@@ -8,6 +8,7 @@ import java.util.ResourceBundle;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import BookDetailView.BookDetailViewController;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -16,6 +17,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
+import main.ViewSwitcher;
 import main.driver;
 import model.AuditTrailEntry;
 
@@ -42,6 +44,8 @@ public class AuditTrailController implements Initializable {
     @FXML
     void backButtonPress(ActionEvent event) {
     	logger.info("pressed back button");
+    	BookDetailViewController.setBook(book);
+    	ViewSwitcher.getInstance().switchView(2);
     }
     
     public static void setBook(model.Book b) {
@@ -61,7 +65,7 @@ public class AuditTrailController implements Initializable {
 	void populate() {
 		for(model.AuditTrailEntry item : auditTrail) {
 			System.out.println(item.getEntryMsg());
-				auditDisplay.add(item.getEntryMsg());
+				auditDisplay.add(item.getDateAdded() + ": " + item.getEntryMsg());
 		}
 		this.auditList.setItems(auditDisplay);
 		

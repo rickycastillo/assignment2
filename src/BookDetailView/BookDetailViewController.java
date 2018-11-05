@@ -49,6 +49,8 @@ public class BookDetailViewController implements Initializable {
 		String publisher;
 	    BookTableGateway gateway = new BookTableGateway(conn);
 	    PublisherTableGateway publishergateway = new PublisherTableGateway(conn);
+	    LocalDateTime lastModified;
+	    int alreadyModified;
 
 		private static model.Book selectedBook;
 		private static model.Book oldBook;
@@ -73,8 +75,10 @@ public class BookDetailViewController implements Initializable {
 	    
 	    @FXML
 	    void loadAuditTrail() {
+	    	if(!newBook) {
 	    	AuditTrailController.setBook(selectedBook);
 	    	ViewSwitcher.getInstance().switchView(3);
+	    	}
 	    }
 	    
 	    @FXML
@@ -89,6 +93,8 @@ public class BookDetailViewController implements Initializable {
 	    }
 	    @FXML
 	    void clickSaveButton() {
+	    	if(!newBook) checkLastModified();
+	    	if(alreadyModified == 1) return;
 	    	saved = 1;
 			setOnCloseRequest();
 	    	logger.info("clicked save button.. ");
@@ -132,7 +138,23 @@ public class BookDetailViewController implements Initializable {
 				}
 	    	}
 	    }
-	    // if u read this ure gay
+	    private void checkLastModified() {
+	    	System.out.println(lastModified);
+	    	System.out.println(selectedBook.getLastModified());
+
+			if(lastModified.compareTo(selectedBook.getLastModified()) != 0) {
+				alreadyModified = 1;
+				logger.info("dates don't match");
+				Alert alert = new Alert(AlertType.INFORMATION);
+	    		alert.setTitle("ERROR");
+	    		alert.setHeaderText(null);
+	    		alert.setContentText("This book has been modified while you were trying to do so too. SLOW POKE!");
+	    		alert.showAndWait();
+			}
+			
+		}
+
+		// if u read this ure gay
 	    // like super gay u kno...
 		
 	    @Override
@@ -157,6 +179,7 @@ public class BookDetailViewController implements Initializable {
 				isbn.setText(null);
 				date.setText(null);
 		    	comboBox.setValue(publishers.get(0).getTitle());
+		    	lastModified = null;
 			} else {
 				newBook = false;
 				title.setText(selectedBook.getTitle());
@@ -165,6 +188,7 @@ public class BookDetailViewController implements Initializable {
 				isbn.setText(selectedBook.getIsbn());
 				date.setText(String.valueOf(selectedBook.getDateAdded()));
 				comboBox.setValue(publishers.get(selectedBook.getPublisherID()-1).getTitle());
+				lastModified = selectedBook.getLastModified();
 				
 				oldBook = new model.Book();
 				oldBook.setId(selectedBook.getId());
@@ -226,7 +250,7 @@ public class BookDetailViewController implements Initializable {
 					saved = -1;
 					return -1;
 				} else if(dialogResult == JOptionPane.CANCEL_OPTION){
-					saved = -1;
+					saved = 0;
 					return 0;
 				} else {
 					saved = -1;

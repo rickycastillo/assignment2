@@ -47,4 +47,8 @@ public class AuditTrailEntry {
 		
 	}
 	
+	public LocalDateTime getDateAdded() {
+		return dateAdded;
+	}
+	
 }
