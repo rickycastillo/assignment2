@@ -207,6 +207,7 @@ public class BookDetailViewController implements Initializable {
 				oldBook.setYearPublished(selectedBook.getYearPublished());
 				oldBook.setIsbn(selectedBook.getIsbn());
 				oldBook.setDateAdded(selectedBook.getDateAdded());
+				oldBook.setPublisherID(selectedBook.getPublisherID());
 				oldBook.setPublisher(selectedBook.getPublisher());
 			}
 			
