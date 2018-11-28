@@ -138,6 +138,10 @@ public class Book {
 		return gateway.getAuditTrail(this);
 	}
 	
+	public List<AuthorBook> getAuthors(){
+		return null;
+	}
+	
 	
 
 }

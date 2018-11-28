@@ -1,15 +1,25 @@
 package model;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
+
+import gateway.BookTableGateway;
 
 public class Author {
 	
 	int id;
 	String firstName;
 	String lastName;
-	LocalDate dateOfBirth;
+	LocalDateTime dateOfBirth;
 	String gender;
 	String webSite;
+	
+	private BookTableGateway gateway;
+
+	
+	public Author(BookTableGateway gateway) {
+		this.gateway = gateway;
+	}
 	
 	public Author() {
 		id = 0;
@@ -28,7 +38,7 @@ public class Author {
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
-	public void setDOB(LocalDate dob) {
+	public void setDOB(LocalDateTime dob) {
 		this.dateOfBirth = dob;
 	}
 	public void setGender(String gender) {
@@ -46,7 +56,7 @@ public class Author {
 	public String getLastName() {
 		return lastName;
 	}
-	public LocalDate getDOB() {
+	public LocalDateTime getDOB() {
 		return dateOfBirth;
 	}
 	public String getGender() {

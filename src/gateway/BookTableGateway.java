@@ -11,6 +11,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import model.AuditTrailEntry;
+import model.Author;
+import model.AuthorBook;
 import model.Book;
 
 public class BookTableGateway {
@@ -161,6 +163,52 @@ public class BookTableGateway {
 		PreparedStatement st2 = conn.prepareStatement("delete from book where id = ?");
 		st2.setInt(1, book.getId());
 		st2.execute();
+	}
+	
+	public List<AuthorBook> getAuthorsForBook(Book book) throws SQLException{
+		List<AuthorBook> ab = new ArrayList<AuthorBook>();
+		PreparedStatement st = conn.prepareStatement("select * from author_book where book_id = ?");
+		st.setInt(1, book.getId());
+		ResultSet rs = st.executeQuery();
+		
+		List<Author> authors = getAllAuthors();
+		
+		while(rs.next()) {
+			AuthorBook entry = new AuthorBook(this);
+			entry.setBook(book);
+			
+			for (Author author: authors){
+				if (rs.getInt("author_id") == author.getID()) {
+					entry.setAuthor(author);
+				}
+			}
+			
+			entry.setRoyalty(rs.getFloat("royalty"));
+			ab.add(entry);
+		}
+		
+		return ab;
+	}
+	
+	public List<Author> getAllAuthors() throws SQLException{
+		List<Author> authors = new ArrayList<Author>();
+		PreparedStatement st = conn.prepareStatement("select * from author by id");
+		ResultSet rs = st.executeQuery();
+		
+		while(rs.next()) {
+			Author author = new Author(this);
+			author.setFirstName(rs.getString("first_name"));
+			author.setLastName(rs.getString("last_name"));
+			author.setID(rs.getInt("id"));
+			author.setGender(rs.getString("gender"));
+			author.setDOB(turnToDate(rs.getString("dob")));
+			author.setWebsite(rs.getString("web_site"));
+			
+			authors.add(author);
+		}
+		
+		return authors;
+
 	}
 	
 	

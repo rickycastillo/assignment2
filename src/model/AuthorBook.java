@@ -1,10 +1,18 @@
 package model;
 
+import gateway.BookTableGateway;
+
 public class AuthorBook {
 	Author author;
 	Book book;
-	int royalty;
+	float royalty;
 	boolean newRecord;
+	
+	private BookTableGateway gateway;
+	
+	public AuthorBook(BookTableGateway gateway) {
+		this.gateway = gateway;
+	}
 	
 	public AuthorBook() {
 		author = null;
@@ -18,7 +26,7 @@ public class AuthorBook {
 	public void setBook(Book book) {
 		this.book = book;
 	}
-	public void setRoyalty(int royalty) {
+	public void setRoyalty(float royalty) {
 		this.royalty = royalty;
 	}
 	public void setRecordFalse() {
@@ -33,7 +41,7 @@ public class AuthorBook {
 	public Book getBook() {
 		return book;
 	}
-	public int getRoyalty() {
+	public float getRoyalty() {
 		return royalty*100000;
 	}
 	public boolean getRecordStatus() {
