@@ -10,7 +10,7 @@ public class Author {
 	int id;
 	String firstName;
 	String lastName;
-	LocalDateTime dateOfBirth;
+	LocalDate dateOfBirth;
 	String gender;
 	String webSite;
 	
@@ -38,7 +38,7 @@ public class Author {
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
-	public void setDOB(LocalDateTime dob) {
+	public void setDOB(LocalDate dob) {
 		this.dateOfBirth = dob;
 	}
 	public void setGender(String gender) {
@@ -56,7 +56,7 @@ public class Author {
 	public String getLastName() {
 		return lastName;
 	}
-	public LocalDateTime getDOB() {
+	public LocalDate getDOB() {
 		return dateOfBirth;
 	}
 	public String getGender() {

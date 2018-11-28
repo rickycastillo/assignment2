@@ -5,6 +5,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
@@ -168,7 +169,6 @@ public class BookTableGateway {
 	public List<AuthorBook> getAuthorsForBook(Book book) throws SQLException{
 		List<AuthorBook> ab = new ArrayList<AuthorBook>();
 		PreparedStatement st = conn.prepareStatement("select * from author_book where book_id = ?");
-		st.setInt(1, book.getId());
 		ResultSet rs = st.executeQuery();
 		
 		List<Author> authors = getAllAuthors();
@@ -190,10 +190,14 @@ public class BookTableGateway {
 		return ab;
 	}
 	
+	
+	
 	public List<Author> getAllAuthors() throws SQLException{
 		List<Author> authors = new ArrayList<Author>();
 		PreparedStatement st = conn.prepareStatement("select * from author by id");
 		ResultSet rs = st.executeQuery();
+		
+		final DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MMM-dd");
 		
 		while(rs.next()) {
 			Author author = new Author(this);
@@ -201,7 +205,7 @@ public class BookTableGateway {
 			author.setLastName(rs.getString("last_name"));
 			author.setID(rs.getInt("id"));
 			author.setGender(rs.getString("gender"));
-			author.setDOB(turnToDate(rs.getString("dob")));
+			author.setDOB(LocalDate.parse(rs.getString("dob")));
 			author.setWebsite(rs.getString("web_site"));
 			
 			authors.add(author);
