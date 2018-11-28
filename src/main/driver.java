@@ -1,4 +1,4 @@
-// CS 4743 Assignment 2 by Ricardo Castillo and Jaynan San Jose
+// CS 4743 Assignment 3 by Ricardo Castillo and Jaynan San Jose
 
 package main;
 

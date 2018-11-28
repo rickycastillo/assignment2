@@ -256,7 +256,7 @@ public class BookDetailViewController implements Initializable {
 			if(saved == 0) {
 				int dialogResult = JOptionPane.showConfirmDialog (null, "Save Changes?","Warning",dialogButton);
 				if(dialogResult == JOptionPane.YES_OPTION){
-					//getInstance().clickSaveButton();
+					//c.clickSaveButton();
 					saved = -1;
 					return -1;
 				} else if(dialogResult == JOptionPane.CANCEL_OPTION){
