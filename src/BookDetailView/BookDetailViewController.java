@@ -9,7 +9,9 @@ import gateway.BookTableGateway;
 import gateway.PublisherTableGateway;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
+import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.ListView;
 import javafx.scene.control.SingleSelectionModel;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
@@ -76,11 +78,36 @@ public class BookDetailViewController implements Initializable {
 	    private ComboBox<String> comboBox;
 	    
 	    @FXML
+	    private ListView<?> authorList;
+
+	    @FXML
+	    private Button deleteAuthor;
+
+	    @FXML
+	    private Button addAuthor;
+
+	    
+	    @FXML
 	    void loadAuditTrail() {
 	    	if(!newBook) {
 	    	AuditTrailController.setBook(selectedBook);
 	    	ViewSwitcher.getInstance().switchView(3);
 	    	}
+	    }
+	    
+	    @FXML
+	    void clickedAddAuthor() {
+
+	    }
+
+	    @FXML
+	    void clickedAuthorList() {
+
+	    }
+
+	    @FXML
+	    void clickedDeleteAuthor() {
+
 	    }
 	    
 	    @FXML
@@ -269,4 +296,5 @@ public class BookDetailViewController implements Initializable {
 			return -1;
 		
 	}
+	
 }

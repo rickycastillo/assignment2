@@ -3,7 +3,10 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
@@ -13,7 +16,10 @@
       <Text strokeType="OUTSIDE" strokeWidth="0.0" text="BookDetailView" BorderPane.alignment="CENTER" />
    </top>
    <bottom>
-      <Button mnemonicParsing="false" onAction="#clickSaveButton" text="Save" BorderPane.alignment="CENTER" />
+      <Button mnemonicParsing="false" onAction="#clickSaveButton" text="Save" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="10.0" />
+         </BorderPane.margin></Button>
    </bottom>
    <center>
       <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
@@ -51,6 +57,29 @@
                   <Insets left="360.0" />
                </VBox.margin>
             </Button>
+            <SplitPane dividerPositions="0.7650602409638554" prefHeight="160.0" prefWidth="200.0">
+              <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="158.0" prefWidth="353.0">
+                     <children>
+                        <ListView fx:id="authorList" layoutX="2.0" layoutY="18.0" onMouseClicked="#clickedAuthorList" prefHeight="110.0" prefWidth="344.0">
+                           <padding>
+                              <Insets bottom="50.0" left="50.0" right="50.0" />
+                           </padding>
+                        </ListView>
+                        <Text layoutX="2.0" layoutY="13.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Authors" />
+                     </children>
+                  </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                     <children>
+                        <Button fx:id="deleteAuthor" layoutX="7.0" layoutY="79.0" mnemonicParsing="false" onMouseClicked="#clickedDeleteAuthor" text="Delete Author" />
+                        <Button fx:id="addAuthor" layoutX="14.0" layoutY="32.0" mnemonicParsing="false" onMouseClicked="#clickedAddAuthor" text="Add Author" />
+                     </children>
+                  </AnchorPane>
+              </items>
+               <VBox.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="10.0" />
+               </VBox.margin>
+            </SplitPane>
          </children>
       </VBox>
    </center>
