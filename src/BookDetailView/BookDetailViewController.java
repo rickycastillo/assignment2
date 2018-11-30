@@ -5,6 +5,7 @@ import org.apache.logging.log4j.Logger;
 import com.mysql.cj.protocol.Protocol.GetProfilerEventHandlerInstanceFunction;
 
 import AuditTrail.AuditTrailController;
+import gateway.AuthorGateway;
 import gateway.BookTableGateway;
 import gateway.PublisherTableGateway;
 import javafx.scene.control.Alert;
@@ -18,6 +19,8 @@ import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 import main.ViewSwitcher;
 import main.driver;
+import model.Author;
+import model.AuthorBook;
 import model.Publisher;
 
 import java.net.URL;
@@ -30,6 +33,7 @@ import java.util.List;
 import java.util.ResourceBundle;
 
 import javax.swing.JOptionPane;
+import javax.swing.JTextField;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -50,9 +54,12 @@ public class BookDetailViewController implements Initializable {
 		boolean newBook;
 		private List<model.Book> books;
 		List<Publisher> publishers;
+		List<AuthorBook> authors;
+		private ObservableList<String> authorsDisplay = FXCollections.observableArrayList();
 		String publisher;
 	    BookTableGateway gateway = new BookTableGateway(conn);
 	    PublisherTableGateway publishergateway = new PublisherTableGateway(conn);
+	    AuthorGateway authorgateway = new AuthorGateway(conn);
 	    LocalDateTime lastModified;
 	    int alreadyModified;
 
@@ -97,17 +104,40 @@ public class BookDetailViewController implements Initializable {
 	    
 	    @FXML
 	    void clickedAddAuthor() {
+    		Author author = new Author();
+	    	JTextField firstName = new JTextField();
+	    	JTextField lastName = new JTextField();
+	    	JTextField dob = new JTextField();
+	    	JTextField gender = new JTextField();
+	    	JTextField weBsite = new JTextField();
 
+	    	Object[] input = {
+	    			"First Name: ", firstName,
+	    			"Last Name: ", lastName,
+	    			"Date of Birth: ", dob,
+	    			"Gender: ", gender,
+	    			"Website: ", weBsite,
+	    	};
+	    	
+	    	int option = JOptionPane.showConfirmDialog(null, input, "Add Author", JOptionPane.OK_CANCEL_OPTION);
+	    	if(option == JOptionPane.OK_OPTION) {
+	    		author.setFirstName(firstName.getText());
+	    		author.setLastName(lastName.getText());
+	    	//	author.setDOB(turnToDate(dob.getText()));
+	    		author.setGender(gender.getText());
+	    		author.setWebsite(weBsite.getText());
+	    	}
+	    	
 	    }
 
 	    @FXML
 	    void clickedAuthorList() {
-
+	    	
 	    }
 
 	    @FXML
 	    void clickedDeleteAuthor() {
-
+	    	
 	    }
 	    
 	    @FXML
@@ -219,6 +249,17 @@ public class BookDetailViewController implements Initializable {
 		    	comboBox.setValue(publishers.get(0).getTitle());
 		    	lastModified = null;
 			} else {
+				try {
+					authors = gateway.getAuthorsForBook(selectedBook);
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				if(authors != null) {
+					for(AuthorBook item : authors) {
+						authorsDisplay.add(item.getPrintStatement());
+					}
+				}
 				newBook = false;
 				title.setText(selectedBook.getTitle());
 				summary.setText(selectedBook.getSummary());

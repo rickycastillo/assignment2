@@ -47,4 +47,8 @@ public class AuthorBook {
 	public boolean getRecordStatus() {
 		return newRecord;
 	}
+
+	public String getPrintStatement() {
+		return author.getFirstName();
+	}
 }
