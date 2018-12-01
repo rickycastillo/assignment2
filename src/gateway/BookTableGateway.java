@@ -171,6 +171,7 @@ public class BookTableGateway {
 	public List<AuthorBook> getAuthorsForBook(Book book) throws SQLException{
 		List<AuthorBook> ab = new ArrayList<AuthorBook>();
 		PreparedStatement st = conn.prepareStatement("select * from author_book where book_id = ?");
+		st.setInt(1, book.getId());
 		ResultSet rs = st.executeQuery();
 		
 		List<Author> authors = getAllAuthors();
@@ -196,10 +197,9 @@ public class BookTableGateway {
 	
 	public List<Author> getAllAuthors() throws SQLException{
 		List<Author> authors = new ArrayList<Author>();
-		PreparedStatement st = conn.prepareStatement("select * from author by id");
+		PreparedStatement st = conn.prepareStatement("select * from author order by id");
 		ResultSet rs = st.executeQuery();
-		
-		final DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MMM-dd");
+
 		
 		while(rs.next()) {
 			Author author = new Author(this);

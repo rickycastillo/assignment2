@@ -3681,3 +3681,59 @@
 19:21:24.321 INFO  BookListView.BookListViewController$1 : You clicked this: The Evil Door 2
 19:21:24.400 INFO  BookDetailView.BookDetailViewController : loaded book's detail
 19:21:28.612 INFO  main.driver : connection closed.
+21:23:48.578 INFO  main.driver : program initialized
+21:23:48.621 INFO  main.driver : Sucess!
+21:23:49.331 INFO  main.driver : connection created
+21:23:51.946 INFO  BookDetailView.BookDetailViewController : loaded book's detail
+21:24:03.423 INFO  BookDetailView.BookDetailViewController : loaded book's detail
+21:24:05.355 INFO  BookListView.BookListViewController : initializing book list
+21:24:05.435 INFO  BookListView.BookListViewController : loaded book list view
+21:24:05.436 INFO  BookListView.BookListViewController : successfully populated list
+21:24:06.199 INFO  BookListView.BookListViewController$1 : You clicked this: The Adventures of Rayman ye no
+21:24:06.306 INFO  BookDetailView.BookDetailViewController : loaded book's detail
+21:24:10.340 INFO  main.driver : connection closed.
+19:36:20.106 INFO  main.driver : program initialized
+19:36:20.139 INFO  main.driver : Sucess!
+19:36:20.867 INFO  main.driver : connection created
+19:36:23.309 INFO  BookListView.BookListViewController : initializing book list
+19:36:23.408 INFO  BookListView.BookListViewController : loaded book list view
+19:36:23.408 INFO  BookListView.BookListViewController : successfully populated list
+19:36:26.693 INFO  BookListView.BookListViewController$1 : You clicked this: The Evil Door 2
+19:36:26.801 INFO  BookDetailView.BookDetailViewController : loaded book's detail
+19:37:00.988 INFO  main.driver : connection closed.
+19:37:02.928 INFO  main.driver : program initialized
+19:37:02.954 INFO  main.driver : Sucess!
+19:37:03.505 INFO  main.driver : connection created
+19:37:05.304 INFO  BookListView.BookListViewController : initializing book list
+19:37:05.390 INFO  BookListView.BookListViewController : loaded book list view
+19:37:05.391 INFO  BookListView.BookListViewController : successfully populated list
+19:37:06.830 INFO  BookListView.BookListViewController$1 : You clicked this: The Book of Evil
+19:37:06.954 INFO  BookDetailView.BookDetailViewController : loaded book's detail
+20:35:08.404 INFO  main.driver : connection closed.
+21:23:36.723 INFO  main.driver : program initialized
+21:23:36.747 INFO  main.driver : Sucess!
+21:23:37.419 INFO  main.driver : connection created
+21:23:39.018 INFO  BookListView.BookListViewController : initializing book list
+21:23:39.121 INFO  BookListView.BookListViewController : loaded book list view
+21:23:39.122 INFO  BookListView.BookListViewController : successfully populated list
+21:23:39.914 INFO  BookListView.BookListViewController$1 : You clicked this: The Evil Door 2
+21:23:40.186 INFO  BookDetailView.BookDetailViewController : loaded book's detail
+21:26:01.245 INFO  main.driver : program initialized
+21:26:01.270 INFO  main.driver : Sucess!
+21:26:01.996 INFO  main.driver : connection created
+21:26:03.575 INFO  BookListView.BookListViewController : initializing book list
+21:26:03.677 INFO  BookListView.BookListViewController : loaded book list view
+21:26:03.677 INFO  BookListView.BookListViewController : successfully populated list
+21:26:04.454 INFO  BookListView.BookListViewController$1 : You clicked this: The Evil Door 2
+21:26:04.732 INFO  BookDetailView.BookDetailViewController : loaded book's detail
+21:26:47.222 INFO  main.driver : program initialized
+21:26:47.249 INFO  main.driver : Sucess!
+21:26:47.854 INFO  main.driver : connection created
+21:26:49.654 INFO  BookListView.BookListViewController : initializing book list
+21:26:49.773 INFO  BookListView.BookListViewController : loaded book list view
+21:26:49.774 INFO  BookListView.BookListViewController : successfully populated list
+21:26:50.647 INFO  BookListView.BookListViewController$1 : You clicked this: The Evil Door 2
+21:26:50.885 INFO  BookDetailView.BookDetailViewController : loaded book's detail
+21:26:57.327 INFO  main.driver : connection closed.
+21:27:00.858 INFO  main.driver : connection closed.
+21:27:03.455 INFO  main.driver : connection closed.
