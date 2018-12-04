@@ -18,7 +18,7 @@ private Connection conn;
 		this.conn = conn;
 	}
 	
-	public int insertAuthor(Author author) throws SQLException {
+	public void insertAuthor(Author author) throws SQLException {
 		PreparedStatement st = conn.prepareStatement("insert into author "
 				+ "(first_name, last_name, dob, gender, web_site) values (?, ?, ?, ?, ?) ", PreparedStatement.RETURN_GENERATED_KEYS);
 		st.setString(1,  author.getFirstName());
@@ -30,9 +30,8 @@ private Connection conn;
 		ResultSet newKeys = st.getGeneratedKeys();
 		newKeys.next();
 
-		int key = newKeys.getInt(1);
+		author.setID(newKeys.getInt(1));
 		
-		return key;
 	}
 	
 	public void deleteAuthor(Author author) throws SQLException {

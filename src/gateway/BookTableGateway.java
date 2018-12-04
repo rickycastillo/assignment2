@@ -118,14 +118,26 @@ public class BookTableGateway {
 		
 		
 		
-		
-		
-		
 	}
 	
 	public void addAuthorToBook(Author author, Book book, Float royalty) throws SQLException {
+		
+		boolean foundAuthor = false;
+		List<Author> authors = getAllAuthors();
+		for(Author rec_author: authors) {
+			if(rec_author.getFirstName().equals(author.getFirstName()) == true) {
+				foundAuthor = true;
+			}
+		}
+		
+		if(foundAuthor = false) {
+			AuthorGateway tempGateway = new AuthorGateway(conn);
+			tempGateway.insertAuthor(author);
+		}
+		
+		
 		PreparedStatement st = conn.prepareStatement("insert into author_book "
-				+ "(author_id, book_id, royalty) values (?, ?, ?) ", PreparedStatement.RETURN_GENERATED_KEYS);
+				+ "(author_id, book_id, royalty) values (?, ?, ?) ");
 		st.setInt(1,  author.getID());
 		st.setInt(2, book.getId());
 		st.setFloat(3, royalty);
