@@ -152,6 +152,25 @@ public class BookDetailViewController implements Initializable {
 	    @FXML
 	    void clickedDeleteAuthor() {
 	    	selected = authorList.getSelectionModel().getSelectedItem();
+	    	System.out.print(selected);
+	    	String[] tokens = selected.split(" ");
+	    	List<Author> authors_list = null;
+			try {
+				authors_list = gateway.getAllAuthors();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+	    	for(Author item: authors_list) {
+	    		if(item.getFirstName().equals(tokens[0]) && item.getLastName().equals(tokens[1])){
+	    			try {
+						authorgateway.deleteAuthor(item);
+					} catch (SQLException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+	    		}
+	    	}
 	    }
 	    
 	    @FXML
