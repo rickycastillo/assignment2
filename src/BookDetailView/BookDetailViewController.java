@@ -113,6 +113,8 @@ public class BookDetailViewController implements Initializable {
 	    	JTextField dob = new JTextField();
 	    	JTextField gender = new JTextField();
 	    	JTextField weBsite = new JTextField();
+	    	JTextField royalty = new JTextField();
+	    	Float royaltyValue = null;
 
 	    	Object[] input = {
 	    			"First Name: ", firstName,
@@ -120,6 +122,7 @@ public class BookDetailViewController implements Initializable {
 	    			"Date of Birth: ", dob,
 	    			"Gender: ", gender,
 	    			"Website: ", weBsite,
+	    			"Royalty: ", royalty,
 	    	};
 	    	
 	    	int option = JOptionPane.showConfirmDialog(null, input, "Add Author", JOptionPane.OK_CANCEL_OPTION);
@@ -129,9 +132,11 @@ public class BookDetailViewController implements Initializable {
 	    		author.setDOB(turnToDOB(dob.getText()));
 	    		author.setGender(gender.getText());
 	    		author.setWebsite(weBsite.getText());
+	    		royaltyValue = Float.parseFloat(royalty.getText());
 	    	}
 	    	try {
 				authorgateway.insertAuthor(author);
+				gateway.addAuthorToBook(author, selectedBook, royaltyValue);
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
