@@ -123,6 +123,15 @@ public class BookTableGateway {
 		
 	}
 	
+	public void addAuthorToBook(Author author, Book book, Float royalty) throws SQLException {
+		PreparedStatement st = conn.prepareStatement("insert into author_book "
+				+ "(author_id, book_id, royalty) values (?, ?, ?) ", PreparedStatement.RETURN_GENERATED_KEYS);
+		st.setInt(1,  author.getID());
+		st.setInt(2, book.getId());
+		st.setFloat(3, royalty);
+		st.executeUpdate();
+	}
+	
 	
 	
 	//Read portion of CRUD.
@@ -199,7 +208,6 @@ public class BookTableGateway {
 		List<Author> authors = new ArrayList<Author>();
 		PreparedStatement st = conn.prepareStatement("select * from author order by id");
 		ResultSet rs = st.executeQuery();
-
 		
 		while(rs.next()) {
 			Author author = new Author(this);
@@ -209,7 +217,6 @@ public class BookTableGateway {
 			author.setGender(rs.getString("gender"));
 			author.setDOB(LocalDate.parse(rs.getString("dob")));
 			author.setWebsite(rs.getString("web_site"));
-			
 			authors.add(author);
 		}
 		
