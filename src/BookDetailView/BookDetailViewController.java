@@ -133,14 +133,14 @@ public class BookDetailViewController implements Initializable {
 	    		author.setGender(gender.getText());
 	    		author.setWebsite(weBsite.getText());
 	    		royaltyValue = Float.parseFloat(royalty.getText());
+	    		try {
+					authorgateway.insertAuthor(author);
+					gateway.addAuthorToBook(author, selectedBook, royaltyValue);
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 	    	}
-	    	try {
-				authorgateway.insertAuthor(author);
-				gateway.addAuthorToBook(author, selectedBook, royaltyValue);
-			} catch (SQLException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
 	    	
 	    }
 
