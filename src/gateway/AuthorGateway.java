@@ -37,7 +37,7 @@ private Connection conn;
 	public void deleteAuthor(Author author) throws SQLException {
 		
 		//deletes the audit trail
-		PreparedStatement st1 = conn.prepareStatement("delete from author_book where book_id = ?");
+		PreparedStatement st1 = conn.prepareStatement("delete from author_book where author_id = ?");
 		st1.setInt(1, author.getID());
 		st1.execute();
 		
