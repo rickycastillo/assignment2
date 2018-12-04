@@ -26,6 +26,7 @@ import model.Publisher;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
@@ -66,6 +67,8 @@ public class BookDetailViewController implements Initializable {
 		private static model.Book selectedBook;
 		private static model.Book oldBook;
 		
+		private String selected;
+		
 		@FXML
 	    private TextField title = new TextField();
 
@@ -85,7 +88,7 @@ public class BookDetailViewController implements Initializable {
 	    private ComboBox<String> comboBox;
 	    
 	    @FXML
-	    private ListView<?> authorList;
+	    private ListView<String> authorList;
 
 	    @FXML
 	    private Button deleteAuthor;
@@ -123,10 +126,16 @@ public class BookDetailViewController implements Initializable {
 	    	if(option == JOptionPane.OK_OPTION) {
 	    		author.setFirstName(firstName.getText());
 	    		author.setLastName(lastName.getText());
-	    	//	author.setDOB(turnToDate(dob.getText()));
+	    		author.setDOB(turnToDOB(dob.getText()));
 	    		author.setGender(gender.getText());
 	    		author.setWebsite(weBsite.getText());
 	    	}
+	    	try {
+				authorgateway.insertAuthor(author);
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 	    	
 	    }
 
@@ -137,7 +146,7 @@ public class BookDetailViewController implements Initializable {
 
 	    @FXML
 	    void clickedDeleteAuthor() {
-	    	
+	    	selected = authorList.getSelectionModel().getSelectedItem();
 	    }
 	    
 	    @FXML
@@ -256,9 +265,12 @@ public class BookDetailViewController implements Initializable {
 					e.printStackTrace();
 				}
 				if(authors != null) {
+					System.out.print("enter printing authors...");
+					System.out.print(authors);
 					for(AuthorBook item : authors) {
 						authorsDisplay.add(item.getPrintStatement());
 					}
+					this.authorList.setItems(authorsDisplay);
 				}
 				newBook = false;
 				title.setText(selectedBook.getTitle());
@@ -317,6 +329,11 @@ public class BookDetailViewController implements Initializable {
 		public LocalDateTime turnToDate(String date) {
 			DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
 			LocalDateTime dateTime = LocalDateTime.parse(date, formatter);
+			return dateTime;
+		}
+		public LocalDate turnToDOB(String date) {
+			DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+			LocalDate dateTime = LocalDate.parse(date, formatter);
 			return dateTime;
 		}
 
