@@ -49,6 +49,6 @@ public class AuthorBook {
 	}
 
 	public String getPrintStatement() {
-		return author.getFirstName() + " " + author.getLastName() + "\t\t\t\t\t\t\t" + royalty;
+		return author.getFirstName() + "\t" + author.getLastName() + "\t\t\t\t\t\t\t" + royalty;
 	}
 }

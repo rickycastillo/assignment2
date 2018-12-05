@@ -95,6 +95,9 @@ public class BookDetailViewController implements Initializable {
 
 	    @FXML
 	    private Button addAuthor;
+	    
+	    @FXML
+	    private Button changeRoyalty;
 
 	    
 	    @FXML
@@ -102,6 +105,37 @@ public class BookDetailViewController implements Initializable {
 	    	if(!newBook) {
 	    	AuditTrailController.setBook(selectedBook);
 	    	ViewSwitcher.getInstance().switchView(3);
+	    	}
+	    }
+	    
+	    @FXML
+	    void changeRoyalty() {
+	    	JTextField royalty = new JTextField();
+	    	Object[] input = {
+	    			"New Royalty: ", royalty
+	    	};
+	    	selected = authorList.getSelectionModel().getSelectedItem();
+	    	System.out.print(selected);
+	    	String[] tokens = selected.split("\t");
+	    	List<AuthorBook> authors_book = null;
+	    	int option = JOptionPane.showConfirmDialog(null, input, "Change Royalty", JOptionPane.OK_CANCEL_OPTION);
+	    	if(option == JOptionPane.OK_OPTION) {
+				try {
+					logger.info("Getting Authors for Book...");
+					authors_book = gateway.getAuthorsForBook(selectedBook);
+					System.out.print(authors_book);
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+		    	for(AuthorBook item: authors_book) {
+		    		System.out.printf("Printing Comparison: %s %s %s %s", tokens[0], tokens[1], item.getAuthor().getFirstName(), item.getAuthor().getLastName());
+		    		if(item.getAuthor().getFirstName().equals(tokens[0]) && item.getAuthor().getLastName().equals(tokens[1])){
+		    			logger.info("Changed royalty");
+		    			item.setRoyalty(Float.parseFloat(royalty.getText()));
+		    			System.out.print(item.getRoyalty());
+		    		}
+		    	}
 	    	}
 	    }
 	    
@@ -141,6 +175,21 @@ public class BookDetailViewController implements Initializable {
 					e.printStackTrace();
 				}
 	    	}
+	    	try {
+				authors = gateway.getAuthorsForBook(selectedBook);
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+	    	authorsDisplay.clear();
+			if(authors != null) {
+				System.out.print("enter printing authors...");
+				System.out.print(authors);
+				for(AuthorBook item : authors) {
+					authorsDisplay.add(item.getPrintStatement());
+				}
+				this.authorList.setItems(authorsDisplay);
+			}
 	    	
 	    }
 
@@ -153,7 +202,7 @@ public class BookDetailViewController implements Initializable {
 	    void clickedDeleteAuthor() {
 	    	selected = authorList.getSelectionModel().getSelectedItem();
 	    	System.out.print(selected);
-	    	String[] tokens = selected.split(" ");
+	    	String[] tokens = selected.split("\t");
 	    	List<Author> authors_list = null;
 			try {
 				authors_list = gateway.getAllAuthors();
@@ -171,6 +220,21 @@ public class BookDetailViewController implements Initializable {
 					}
 	    		}
 	    	}
+	    	try {
+				authors = gateway.getAuthorsForBook(selectedBook);
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+	    	authorsDisplay.clear();
+			if(authors != null) {
+				System.out.print("enter printing authors...");
+				System.out.print(authors);
+				for(AuthorBook item : authors) {
+					authorsDisplay.add(item.getPrintStatement());
+				}
+				this.authorList.setItems(authorsDisplay);
+			}
 	    }
 	    
 	    @FXML
