@@ -11,7 +11,7 @@
       <Label text="BookListView" BorderPane.alignment="CENTER" />
    </top>
    <left>
-      <ListView fx:id="BookList" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+      <ListView fx:id="BookList" prefHeight="483.0" prefWidth="325.0" BorderPane.alignment="CENTER" />
    </left>
    <right>
       <Button fx:id="deleteButton" mnemonicParsing="false" onMouseClicked="#deleteSelectedBook" text="Delete Selection" BorderPane.alignment="CENTER_LEFT">

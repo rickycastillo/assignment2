@@ -61,12 +61,9 @@
               <items>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="158.0" prefWidth="353.0">
                      <children>
-                        <ListView fx:id="authorList" layoutX="2.0" layoutY="18.0" onMouseClicked="#clickedAuthorList" prefHeight="110.0" prefWidth="344.0">
-                           <padding>
-                              <Insets bottom="50.0" left="50.0" right="50.0" />
-                           </padding>
-                        </ListView>
+                        <ListView fx:id="authorList" layoutX="2.0" layoutY="18.0" onMouseClicked="#clickedAuthorList" prefHeight="110.0" prefWidth="344.0" />
                         <Text layoutX="2.0" layoutY="13.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Authors" />
+                        <Text layoutX="236.0" layoutY="14.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Royalty" />
                      </children>
                   </AnchorPane>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
