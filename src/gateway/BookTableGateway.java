@@ -120,6 +120,15 @@ public class BookTableGateway {
 		
 	}
 	
+	public void updateRoyalty(Author author, Book book, Float royalty) throws SQLException {
+		PreparedStatement st = conn.prepareStatement("update author_book "
+				+ " SET royalty = ?, where author_id = ? and book_id = ?");
+		st.setFloat(1, royalty);
+		st.setInt(2, author.getID());
+		st.setInt(3, book.getId());
+		st.executeUpdate();
+	}
+	
 	public void addAuthorToBook(Author author, Book book, Float royalty) throws SQLException {
 		
 		boolean foundAuthor = false;
