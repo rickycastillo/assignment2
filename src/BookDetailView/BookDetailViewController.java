@@ -129,11 +129,17 @@ public class BookDetailViewController implements Initializable {
 					e.printStackTrace();
 				}
 		    	for(AuthorBook item: authors_book) {
-		    		System.out.printf("Printing Comparison: %s %s %s %s", tokens[0], tokens[1], item.getAuthor().getFirstName(), item.getAuthor().getLastName());
 		    		if(item.getAuthor().getFirstName().equals(tokens[0]) && item.getAuthor().getLastName().equals(tokens[1])){
 		    			logger.info("Changed royalty");
-		    			item.setRoyalty(Float.parseFloat(royalty.getText()));
-		    			System.out.print(item.getRoyalty());
+		    			try {
+							gateway.updateRoyalty(item.getAuthor(), selectedBook, Float.parseFloat(royalty.getText()));
+						} catch (NumberFormatException e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						} catch (SQLException e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						}
 		    		}
 		    	}
 	    	}
