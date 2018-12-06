@@ -122,7 +122,7 @@ public class BookTableGateway {
 	
 	public void updateRoyalty(Author author, Book book, Float royalty) throws SQLException {
 		PreparedStatement st = conn.prepareStatement("update author_book "
-				+ " SET royalty = ?, where author_id = ? and book_id = ?");
+				+ " SET royalty = ? where author_id = ? AND book_id = ?");
 		st.setFloat(1, royalty);
 		st.setInt(2, author.getID());
 		st.setInt(3, book.getId());
@@ -262,6 +262,7 @@ public class BookTableGateway {
 		}
 		return audit_trails;
 	}
+	
 	public LocalDateTime turnToDate(String date) {
 		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
 		LocalDateTime dateTime = LocalDateTime.parse(date, formatter);
