@@ -18,9 +18,11 @@ import model.Book;
 
 public class BookTableGateway {
 	private Connection conn;
+	private AuthorGateway a_gateway;
 	
 	public BookTableGateway(Connection conn) {
 		this.conn = conn;
+		a_gateway = new AuthorGateway(conn);
 	}
 	
 	public LocalDateTime getLastModified(int id) throws SQLException{
@@ -120,40 +122,6 @@ public class BookTableGateway {
 		
 	}
 	
-	public void updateRoyalty(Author author, Book book, Float royalty) throws SQLException {
-		PreparedStatement st = conn.prepareStatement("update author_book "
-				+ " SET royalty = ? where author_id = ? AND book_id = ?");
-		st.setFloat(1, royalty);
-		st.setInt(2, author.getID());
-		st.setInt(3, book.getId());
-		st.executeUpdate();
-	}
-	
-	public void addAuthorToBook(Author author, Book book, Float royalty) throws SQLException {
-		
-		boolean foundAuthor = false;
-		List<Author> authors = getAllAuthors();
-		for(Author rec_author: authors) {
-			if(rec_author.getFirstName().equals(author.getFirstName()) == true) {
-				foundAuthor = true;
-			}
-		}
-		
-		if(foundAuthor = false) {
-			AuthorGateway tempGateway = new AuthorGateway(conn);
-			tempGateway.insertAuthor(author);
-		}
-		
-		
-		PreparedStatement st = conn.prepareStatement("insert into author_book "
-				+ "(author_id, book_id, royalty) values (?, ?, ?) ");
-		st.setInt(1,  author.getID());
-		st.setInt(2, book.getId());
-		st.setFloat(3, royalty);
-		st.executeUpdate();
-	}
-	
-	
 	
 	//Read portion of CRUD.
 	public List<Book> getBooks() throws SQLException {
@@ -204,7 +172,7 @@ public class BookTableGateway {
 		st.setInt(1, book.getId());
 		ResultSet rs = st.executeQuery();
 		
-		List<Author> authors = getAllAuthors();
+		List<Author> authors = a_gateway.getAllAuthors();
 		
 		while(rs.next()) {
 			AuthorBook entry = new AuthorBook(this);
@@ -223,26 +191,72 @@ public class BookTableGateway {
 		return ab;
 	}
 	
-	
-	
-	public List<Author> getAllAuthors() throws SQLException{
-		List<Author> authors = new ArrayList<Author>();
-		PreparedStatement st = conn.prepareStatement("select * from author order by id");
-		ResultSet rs = st.executeQuery();
+	public void addAuthorToBook(Author author, Book book, Float royalty) throws SQLException {
 		
-		while(rs.next()) {
-			Author author = new Author(this);
-			author.setFirstName(rs.getString("first_name"));
-			author.setLastName(rs.getString("last_name"));
-			author.setID(rs.getInt("id"));
-			author.setGender(rs.getString("gender"));
-			author.setDOB(LocalDate.parse(rs.getString("dob")));
-			author.setWebsite(rs.getString("web_site"));
-			authors.add(author);
+		boolean foundAuthor = false;
+		List<Author> authors = a_gateway.getAllAuthors();
+		for(Author rec_author: authors) {
+			if(rec_author.getFirstName().equals(author.getFirstName()) == true) {
+				foundAuthor = true;
+			}
 		}
 		
-		return authors;
+		if(foundAuthor = false) {
+			AuthorGateway tempGateway = new AuthorGateway(conn);
+			tempGateway.insertAuthor(author);
+		}
+		
+		
+		PreparedStatement st = conn.prepareStatement("insert into author_book "
+				+ "(author_id, book_id, royalty) values (?, ?, ?) ");
+		st.setInt(1,  author.getID());
+		st.setInt(2, book.getId());
+		st.setFloat(3, royalty);
+		st.executeUpdate();
+		
+		String audit_msg = "author: " + author.getFirstName() + " " + author.getLastName() + " added.";
+		
+		PreparedStatement st1 = conn.prepareStatement("insert into audit_trail"
+				+ "(book_id, entry_msg) values (?, ?) ", PreparedStatement.RETURN_GENERATED_KEYS);
+		st1.setInt(1, book.getId());
+		st1.setString(2, audit_msg);
+		st1.execute();
 
+	}
+	
+	public void deleteAuthorFromBook(Author author, Book book) throws SQLException {
+		
+		String audit_msg = "author: " + author.getFirstName() + " " + author.getLastName() + " deleted.";
+		
+		
+		//deletes the audit trail
+		PreparedStatement st1 = conn.prepareStatement("insert into audit_trail"
+					+ "(book_id, entry_msg) values (?, ?) ", PreparedStatement.RETURN_GENERATED_KEYS);
+		st1.setInt(1, book.getId());
+		st1.setString(2, audit_msg);
+		st1.execute();
+			
+		PreparedStatement st2 = conn.prepareStatement("delete from author_book where author_id = ? AND book_id = ?");
+		st2.setInt(1, author.getID());
+		st2.setInt(2, author.getID());
+		st2.execute();
+
+	}
+	
+	public void updateRoyalty(Author author, Book book, Float royalty) throws SQLException {
+		PreparedStatement st = conn.prepareStatement("update author_book "
+				+ " SET royalty = ? where author_id = ? AND book_id = ?");
+		st.setFloat(1, royalty);
+		st.setInt(2, author.getID());
+		st.setInt(3, book.getId());
+		st.executeUpdate();
+		
+		String audit_msg = "author :"  + author.getFirstName() + " " + author.getLastName() + " royalty changed: " + royalty;
+		PreparedStatement st1 = conn.prepareStatement("insert into audit_trail"
+				+ "(book_id, entry_msg) values (?, ?) ", PreparedStatement.RETURN_GENERATED_KEYS);
+		st1.setInt(1, book.getId());
+		st1.setString(2, audit_msg);
+		st1.execute();
 	}
 	
 	

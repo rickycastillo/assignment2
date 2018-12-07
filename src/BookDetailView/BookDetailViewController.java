@@ -59,6 +59,7 @@ public class BookDetailViewController implements Initializable {
 		private ObservableList<String> authorsDisplay = FXCollections.observableArrayList();
 		String publisher;
 	    BookTableGateway gateway = new BookTableGateway(conn);
+	    AuthorGateway a_gateway =  new AuthorGateway(conn);
 	    PublisherTableGateway publishergateway = new PublisherTableGateway(conn);
 	    AuthorGateway authorgateway = new AuthorGateway(conn);
 	    LocalDateTime lastModified;
@@ -211,7 +212,7 @@ public class BookDetailViewController implements Initializable {
 	    	String[] tokens = selected.split("\t");
 	    	List<Author> authors_list = null;
 			try {
-				authors_list = gateway.getAllAuthors();
+				authors_list = a_gateway.getAllAuthors();
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

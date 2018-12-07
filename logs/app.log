@@ -4464,3 +4464,97 @@
 16:24:27.720 INFO  BookListView.BookListViewController : successfully populated list
 16:24:29.056 INFO  BookListView.BookListViewController$1 : You clicked this: The Adventures of the Flying Spaghetti Monster
 16:24:29.264 INFO  BookDetailView.BookDetailViewController : loaded book's detail
+17:42:55.447 INFO  main.driver : program initialized
+17:42:55.477 INFO  main.driver : Sucess!
+17:42:56.059 INFO  main.driver : connection created
+17:42:57.520 INFO  BookListView.BookListViewController : initializing book list
+17:42:57.606 INFO  BookListView.BookListViewController : loaded book list view
+17:42:57.607 INFO  BookListView.BookListViewController : successfully populated list
+17:42:58.583 INFO  BookListView.BookListViewController$1 : You clicked this: Insomnia
+17:42:58.846 INFO  BookDetailView.BookDetailViewController : loaded book's detail
+17:43:03.192 INFO  BookListView.BookListViewController : initializing book list
+17:43:03.274 INFO  BookListView.BookListViewController : loaded book list view
+17:43:03.275 INFO  BookListView.BookListViewController : successfully populated list
+17:43:04.203 INFO  BookListView.BookListViewController$1 : You clicked this: The Adventures of the Flying Spaghetti Monster
+17:43:04.431 INFO  BookDetailView.BookDetailViewController : loaded book's detail
+17:43:16.582 INFO  BookDetailView.BookDetailViewController : Getting Authors for Book...
+17:43:16.698 INFO  BookDetailView.BookDetailViewController : Changed royalty
+17:43:19.576 INFO  BookListView.BookListViewController : initializing book list
+17:43:19.649 INFO  BookListView.BookListViewController : loaded book list view
+17:43:19.650 INFO  BookListView.BookListViewController : successfully populated list
+17:43:24.809 INFO  main.driver : connection closed.
+17:52:56.793 INFO  main.driver : program initialized
+17:52:56.817 INFO  main.driver : Sucess!
+17:52:57.449 INFO  main.driver : connection created
+17:52:58.741 INFO  BookListView.BookListViewController : initializing book list
+17:52:58.833 INFO  BookListView.BookListViewController : loaded book list view
+17:52:58.834 INFO  BookListView.BookListViewController : successfully populated list
+17:53:00.333 INFO  BookListView.BookListViewController$1 : You clicked this: Insomnia
+17:53:00.559 INFO  BookDetailView.BookDetailViewController : loaded book's detail
+17:53:02.589 INFO  BookListView.BookListViewController : initializing book list
+17:53:02.650 INFO  BookListView.BookListViewController : loaded book list view
+17:53:02.651 INFO  BookListView.BookListViewController : successfully populated list
+17:53:05.688 INFO  BookListView.BookListViewController$1 : You clicked this: The Adventures of the Flying Spaghetti Monster
+17:53:05.912 INFO  BookDetailView.BookDetailViewController : loaded book's detail
+17:53:07.939 INFO  main.driver : connection closed.
+17:54:17.621 INFO  main.driver : program initialized
+17:54:17.646 INFO  main.driver : Sucess!
+17:54:18.211 INFO  main.driver : connection created
+17:54:19.978 INFO  BookListView.BookListViewController : initializing book list
+17:54:20.061 INFO  BookListView.BookListViewController : loaded book list view
+17:54:20.062 INFO  BookListView.BookListViewController : successfully populated list
+17:54:20.998 INFO  BookListView.BookListViewController$1 : You clicked this: The Adventures of the Flying Spaghetti Monster
+17:54:21.244 INFO  BookDetailView.BookDetailViewController : loaded book's detail
+17:54:25.640 INFO  BookDetailView.BookDetailViewController : Getting Authors for Book...
+17:54:25.763 INFO  BookDetailView.BookDetailViewController : Changed royalty
+17:54:28.683 INFO  BookListView.BookListViewController : initializing book list
+17:54:28.744 INFO  BookListView.BookListViewController : loaded book list view
+17:54:28.744 INFO  BookListView.BookListViewController : successfully populated list
+17:54:46.862 INFO  BookListView.BookListViewController$1 : You clicked this: The Adventures of the Flying Spaghetti Monster
+17:54:47.087 INFO  BookDetailView.BookDetailViewController : loaded book's detail
+17:55:37.546 INFO  main.driver : connection closed.
+17:55:41.284 INFO  main.driver : program initialized
+17:55:41.312 INFO  main.driver : Sucess!
+17:55:41.971 INFO  main.driver : connection created
+17:55:43.529 INFO  BookListView.BookListViewController : initializing book list
+17:55:43.623 INFO  BookListView.BookListViewController : loaded book list view
+17:55:43.624 INFO  BookListView.BookListViewController : successfully populated list
+17:55:44.746 INFO  BookListView.BookListViewController$1 : You clicked this: Insomnia
+17:55:44.973 INFO  BookDetailView.BookDetailViewController : loaded book's detail
+18:04:16.142 INFO  main.driver : program initialized
+18:04:16.166 INFO  main.driver : Sucess!
+18:04:16.740 INFO  main.driver : connection created
+18:04:17.895 INFO  main.driver : connection closed.
+18:04:32.334 INFO  main.driver : connection closed.
+18:04:34.102 INFO  main.driver : program initialized
+18:04:34.127 INFO  main.driver : Sucess!
+18:04:34.765 INFO  main.driver : connection created
+18:04:36.499 INFO  BookListView.BookListViewController : initializing book list
+18:04:36.666 INFO  BookListView.BookListViewController : loaded book list view
+18:04:36.667 INFO  BookListView.BookListViewController : successfully populated list
+18:04:37.729 INFO  BookListView.BookListViewController$1 : You clicked this: The Adventures of the Flying Spaghetti Monster
+18:04:37.981 INFO  BookDetailView.BookDetailViewController : loaded book's detail
+18:07:06.551 INFO  BookListView.BookListViewController : initializing book list
+18:07:06.616 INFO  BookListView.BookListViewController : loaded book list view
+18:07:06.616 INFO  BookListView.BookListViewController : successfully populated list
+18:07:08.005 INFO  BookListView.BookListViewController$1 : You clicked this: The Adventures of the Flying Spaghetti Monster
+18:07:08.213 INFO  BookDetailView.BookDetailViewController : loaded book's detail
+18:07:11.415 INFO  main.driver : connection closed.
+18:07:13.910 INFO  main.driver : program initialized
+18:07:13.939 INFO  main.driver : Sucess!
+18:07:14.531 INFO  main.driver : connection created
+18:07:15.894 INFO  BookListView.BookListViewController : initializing book list
+18:07:16.027 INFO  BookListView.BookListViewController : loaded book list view
+18:07:16.028 INFO  BookListView.BookListViewController : successfully populated list
+18:07:16.968 INFO  BookListView.BookListViewController$1 : You clicked this: The Adventures of the Flying Spaghetti Monster
+18:07:17.198 INFO  BookDetailView.BookDetailViewController : loaded book's detail
+18:08:16.440 INFO  main.driver : program initialized
+18:08:16.468 INFO  main.driver : Sucess!
+18:08:17.039 INFO  main.driver : connection created
+18:08:18.791 INFO  BookListView.BookListViewController : initializing book list
+18:08:18.878 INFO  BookListView.BookListViewController : loaded book list view
+18:08:18.879 INFO  BookListView.BookListViewController : successfully populated list
+18:08:22.081 INFO  BookListView.BookListViewController$1 : You clicked this: The Adventures of the Flying Spaghetti Monster
+18:08:22.327 INFO  BookDetailView.BookDetailViewController : loaded book's detail
+18:08:37.135 INFO  main.driver : connection closed.
+18:09:19.401 INFO  main.driver : connection closed.

@@ -3,6 +3,7 @@ package model;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
+import gateway.AuthorGateway;
 import gateway.BookTableGateway;
 
 public class Author {
@@ -15,11 +16,17 @@ public class Author {
 	String webSite;
 	
 	private BookTableGateway gateway;
-
+	private AuthorGateway a_gateway;
 	
 	public Author(BookTableGateway gateway) {
 		this.gateway = gateway;
 	}
+	
+	public Author(AuthorGateway gateway) {
+		this.a_gateway = gateway;
+	}
+	
+	
 	
 	public Author() {
 		id = 0;
