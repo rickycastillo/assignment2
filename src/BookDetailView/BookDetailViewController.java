@@ -144,6 +144,21 @@ public class BookDetailViewController implements Initializable {
 		    		}
 		    	}
 	    	}
+	    	try {
+				authors = gateway.getAuthorsForBook(selectedBook);
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+	    	authorsDisplay.clear();
+			if(authors != null) {
+				System.out.print("enter printing authors...");
+				System.out.print(authors);
+				for(AuthorBook item : authors) {
+					authorsDisplay.add(item.getPrintStatement());
+				}
+				this.authorList.setItems(authorsDisplay);
+			}
 	    }
 	    
 	    @FXML
